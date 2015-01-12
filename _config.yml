@@ -3,7 +3,7 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-pygments: true
+highlighter: pygments 
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
@@ -13,9 +13,14 @@ tagline: A few words about PostgreSQL and other things
 author :
   name : Damien Clochard
   email : damien@dalibo.com
+  email_md5 : 107912c9b29c99f2726d8b4f8e0948de
   github : daamien
   twitter : daamien
+  linkedin : https://www.linkedin.com/pub/damien-clochard/a6/b/830
+  gplus : https://plus.google.com/u/0/+damienclochard/	
   feedburner : 
+  bio : "My name's Damien Clochard and I work at Dalibo, a French PostgreSQL company. I'm also the executive editor of PG Magazine (pgmag.org)"
+
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -83,7 +88,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : taadeem
     livefyre :
       site_id : 123
     intensedebate :

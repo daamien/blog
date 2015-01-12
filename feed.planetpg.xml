@@ -8,7 +8,7 @@ layout: null
 		<description>Posts categorized as 'PGFR'</description>
 		<link>{{ site.url }}</link>
 		<atom:link href="{{ site.url }}/feed.pgfr.xml" rel="self" type="application/rss+xml" />
-		{% for post in site.categories.french %}
+		{% for post in site.categories.english %}
 			<item>
 				<title>{{ post.title }}</title>
 				<description>{{ post.content | xml_escape }}</description>
