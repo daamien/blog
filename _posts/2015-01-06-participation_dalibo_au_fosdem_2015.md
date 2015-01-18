@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Participation Dalibo au FOSDEM 2015
+title: Rendez-vous au FOSDEM 2015 !
 category: french
 tags: [PostgreSQL, FOSDEM, conference]
 ---
