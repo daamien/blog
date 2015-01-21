@@ -1,4 +1,5 @@
 ---
+date: 2012-11-12 10:27:36 
 layout: post
 title: "pgBadger is moving fast"
 description: ""

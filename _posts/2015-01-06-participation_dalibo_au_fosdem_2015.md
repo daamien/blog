@@ -1,4 +1,5 @@
 ---
+date : 2015-01-06 14:14:14
 layout: post
 title: Rendez-vous au FOSDEM 2015 !
 category: french
