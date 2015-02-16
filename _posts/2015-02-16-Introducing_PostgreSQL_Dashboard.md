@@ -39,7 +39,7 @@ PostgreSQL Dashboard is an open project distributed under the PostgreSQL licence
 
 **Links :**
 
-* website: [http://daamien.github.io/PostgreSQL-Dashboard/]()
-* code: [https://github.com/daamien/PostgreSQL-Dashboard]()
+* [website](http://daamien.github.io/PostgreSQL-Dashboard/)
+* [code](https://github.com/daamien/PostgreSQL-Dashboard)
 
 
