@@ -4,7 +4,7 @@ layout: post
 title: "Introducing PostgreSQL Dashboard"
 description: "A real-time monitoring screen based on Dashing and Sinatra"
 category: english
-tags: [PostgreSQL,pgBadger]
+tags: [PostgreSQL,Dashboard,Monitoring,Dashing]
 ---
 
 ## A real-time monitoring screen based on Dashing and Sinatra 
