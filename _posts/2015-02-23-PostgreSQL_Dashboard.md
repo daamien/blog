@@ -44,7 +44,7 @@ Vous pouvez envoyer vos idées, vos demandes et vos patches via les outils de Gi
 
 **Pour aller plus loin :**
 
-* website: [http://daamien.github.io/PostgreSQL-Dashboard/]()
-* code: [https://github.com/daamien/PostgreSQL-Dashboard]()
+* [site web](http://daamien.github.io/PostgreSQL-Dashboard/)
+* [code](https://github.com/daamien/PostgreSQL-Dashboard)
 
 
