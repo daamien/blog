@@ -7,15 +7,14 @@ tags: [PostgreSQL, performance, workload]
 ---
 
 Yesterday, DALIBO release the second major version of [PoWA](http://dalibo.github.io/powa/), the PostgreSQL Workload Analyzer. 
-We're kind of proud of what we've achieved with this new version, however we did crack some eggs while making that omelette...
-H
-ere's a brief explanation for all the disruptives choices we made...
+We're kind of proud of what we've achieved with this new version, however we did crack some eggs while making that omelette... Here's a brief explanation for all the disruptive choices we made...
 
 <!-- MORE -->
 
 When we launched the [PoWA](http://dalibo.github.io/powa/) project in 2014, we decided to release the project very early and see where it would lead us to. Over the last few months, we took some time to analyze the situation. We looked at the users feedback. We tried to imagine how the project would interact with the other monitoring and performance tools we're working on, especially [OPM](http://opm.io), [pg_stat_kcache](https://github.com/dalibo/pg_stat_kcache) and [pg_qual_stats](https://github.com/dalibo/pg_qualstats) 
-
-![http://xkcd.com/1428/](http://imgs.xkcd.com/comics/move_fast_and_break_things.png)
+<p align='center'>
+<a href='http://xkcd.com/1428'><img src='http://imgs.xkcd.com/comics/move_fast_and_break_things.png'></a>
+</p>
 
 We came to the conclusion that in order to move forward, we had to make a lot of disruptive technical choices. Please fasten your seatbelt:
 
