@@ -1,13 +1,13 @@
 ---
-date : 2015-03-02 20:03:14
+date : 2015-03-02 19:03:14
 layout: post
 title: PoWA 2 ! Moving Fast and Breaking Things
 category: english
 tags: [PostgreSQL, performance, workload]
 ---
 
-Yesterday, DALIBO release the second major version of [PoWA](http://dalibo.github.io/powa/), the PostgreSQL Workload Analyzer. 
-We're kind of proud of what we've achieved with this new version, however we did crack some eggs while making that omelette... Here's a brief explanation for all the disruptive choices we made...
+Yesterday, DALIBO released the second major version of [PoWA](http://dalibo.github.io/powa/), the PostgreSQL Workload Analyzer. 
+We're kind of proud of what we've achieved with this new release, however we did crack some eggs while making the omelette... Here's a brief explanation for all the disruptive choices we made...
 
 <!-- MORE -->
 
