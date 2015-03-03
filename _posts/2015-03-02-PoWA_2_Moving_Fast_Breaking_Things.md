@@ -12,6 +12,7 @@ We're kind of proud of what we've achieved with this new release, however we did
 <!-- MORE -->
 
 When we launched the [PoWA](http://dalibo.github.io/powa/) project in 2014, we decided to release the project very early and see where it would lead us to. Over the last few months, we took some time to analyze the situation. We looked at the users feedback. We tried to imagine how the project would interact with the other monitoring and performance tools we're working on, especially [OPM](http://opm.io), [pg_stat_kcache](https://github.com/dalibo/pg_stat_kcache) and [pg_qual_stats](https://github.com/dalibo/pg_qualstats) 
+
 <p align='center'>
 <a href='http://xkcd.com/1428'><img src='http://imgs.xkcd.com/comics/move_fast_and_break_things.png'></a>
 </p>
