@@ -4,7 +4,7 @@ layout: post
 title: "70 Shades of Postgres"
 description: "PostgreSQL as a Data Integration Platform"
 category: english
-tags: [PostgreSQL,FDW,,ETL]
+tags: [PostgreSQL,FDW,ETL]
 ---
 
 Support for the SQL/MED standard was introduced in PostgreSQL 9.1 (2011). Four years later, we now have more the 70 Foreign Data Wrappers (FDW) available, 
@@ -12,7 +12,7 @@ which you can use PostgreSQL to read and write on type of data storage : Oracle,
 
 <!-- More -->
 
-![](_images/catwrap.jpg)
+![](https://raw.githubusercontent.com/daamien/blog/gh-pages/_images/catwrap.jpg)
 
 A few days ago, during FOSDEM I attended a talk by my colleague Ronan Dunklau about [Foreign Data Wrappers in PostgreSQL : Where are we now ?](https://fosdem.org/2015/schedule/event/foreign_data_wrappers_in_postgresql_where_are_we_now/). Ronan is the author of the [multicorn](http://multicorn.org/) extension and during his talk I couldn't 
 help but thinking the multicorn is probably one of the most underrated piece of code in the PostgreSQL Community. As a quick exercise I started to count all PostgreSQL FDW 
@@ -48,7 +48,7 @@ Here's comme the new ``IMPORT FOREIGN SCHEMA`` statement ! This new features was
 
 This is a huge improvement ! This ``IMPORT`` feature combined and dozens of Wrappers available are 2 key factors : PostgreSQL is becoming a solid Data Integration Plateform and it reduces the need for external ETL software. 
 
-![PostgreSQL as a Data Integration Platefrm](_images/800px-Dataintegration.png)
+![PostgreSQL as a Data Integration Plateform](https://raw.githubusercontent.com/daamien/blog/gh-pages/_images/800px-Dataintegration.png)
 
 **Links :**
 
