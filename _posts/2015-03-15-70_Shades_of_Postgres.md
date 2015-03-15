@@ -7,8 +7,8 @@ category: english
 tags: [PostgreSQL,FDW,ETL]
 ---
 
-Support for the SQL/MED standard was introduced in PostgreSQL 9.1 (2011). Four years later, we now have more the 70 Foreign Data Wrappers (FDW) available, 
-which you can use PostgreSQL to read and write on type of data storage : Oracle, MongoDB, XML files, Hadoop, Git repos, Twitter, you name it, ...
+Support for the SQL/MED standard was introduced in PostgreSQL 9.1 (2011). Four years later, we now have more the [70 Foreign Data Wrappers](https://wiki.postgresql.org/wiki/FDW?nocache=1) (FDW) available, 
+which you can use to read and write on type of data storage : Oracle, MongoDB, XML files, Hadoop, Git repos, Twitter, you-name-it, ...
 
 <!-- More -->
 
