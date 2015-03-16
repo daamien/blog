@@ -42,7 +42,7 @@ De plus, il reste une limitation majeure à l'implémentation actuelle : les **m
 
 Heureusement voici la commande ``IMPORT FOREIGN SCHEMA`` ! Cette nouvelle fonctionnalité a écrite par Ronan Dunklau, Michael Paquier et Tom Lane. Vous pouvez lire une démo rapide sur le [blog de Michael](http://michael.otacoo.com/postgresql-2/postgres-9-5-feature-highlight-import-foreign-schema/). Cette commande sera disponible dans la version 9.5.
 
-C'est une amlioration énorme ! Avec cet ``IMPORT`` et les douzaines de wrappers disponibles, PostgreSQL est en passe de devenier une plateforme d'intégration de données unique et le besoin d'utiliser des outils d'ETL externes devient de plus en plus faible. 
+C'est une amélioration énorme ! Avec cet ``IMPORT`` et les douzaines de wrappers disponibles, PostgreSQL est en passe de devenir une plateforme d'intégration de données unique et le besoin d'utiliser des outils d'ETL externes devient de plus en plus faible. 
 
 ![PostgreSQL as a Data Integration Plateform](https://raw.githubusercontent.com/daamien/blog/gh-pages/_images/800px-Dataintegration.png)
 
