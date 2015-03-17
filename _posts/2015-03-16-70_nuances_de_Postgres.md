@@ -15,7 +15,7 @@ Le support du standard SQL/MED a été introduit dans PostgreSQL 9.1 (2011). Qua
 
 Il y a quelque jours, [pendant le FOSDEM](http://blog.taadeem.net/english/2015/01/14/fosdem_2015http://blog.taadeem.net/english/2015/01/14/fosdem_2015) j'ai assisté à la conférence de mon collègue [Ronan Dunklau](http://rdunklau.github.io/about/) intitulée [Foreign Data Wrappers in PostgreSQL : Where are we now ?](https://fosdem.org/2015/schedule/event/foreign_data_wrappers_in_postgresql_where_are_we_now/) Ronan est l'auteur de l'extension [multicorn](http://multicorn.org/) et pendant sa présentation je me suis rappelé à quel point multicorn est probablement le projet le plus sous-estimé de la communauté PostgreSQL. En guise d'exercice, j'ai commencé à compter tous les FDW que je connaissais... et j'ai rapidement réalisé qu'il y en avait trop pour ma mémoire de poisson rouge !
 
-Du coup, je suis retourné sur la  [lise de FDW du wiki PostgreSQL](https://wiki.postgresql.org/wiki/FDW?nocache=1). J'ai commencé à mettre à jour et reformatter le catalogue de tous les wrappers existants et j'ai abouti à une liste de plus de 70 wrappers pour PostgreSQL... 
+Du coup, je suis retourné sur la  [liste de FDW du wiki PostgreSQL](https://wiki.postgresql.org/wiki/FDW?nocache=1). J'ai commencé à mettre à jour et reformatter le catalogue de tous les wrappers existants et j'ai abouti à une liste de plus de 70 wrappers pour PostgreSQL... 
 
 
 ## Quelques leçons à en tirer
@@ -40,7 +40,7 @@ premier pour développer de nouvelles fonctionnalités. Par exemple, CitusDB a p
 
 De plus, il reste une limitation majeure à l'implémentation actuelle : les **meta données**. Actuellement, il n'y a pas de moyen simple d'utiliser les (éventuelles) capacités d'introspection de la source de données distante. En clair : vous devez créer toutes vos tables externes une par une. Lorsque l'on veut se connecter à toutes les tables d'une base distantes, c'est répétitif et il y a un risque d'erreurs. Si vous vous connectez à une base PostgreSQL distante, vous pouvez utiliser des [astuces](https://news.ycombinator.com/item?id=8027472) mais clairement c'est une tache qui devrait être faite au niveau du connecteur lui-même.
 
-Heureusement voici la commande ``IMPORT FOREIGN SCHEMA`` ! Cette nouvelle fonctionnalité a écrite par Ronan Dunklau, Michael Paquier et Tom Lane. Vous pouvez lire une démo rapide sur le [blog de Michael](http://michael.otacoo.com/postgresql-2/postgres-9-5-feature-highlight-import-foreign-schema/). Cette commande sera disponible dans la version 9.5.
+Heureusement voici la commande ``IMPORT FOREIGN SCHEMA`` ! Cette nouvelle fonctionnalité a été écrite par Ronan Dunklau, Michael Paquier et Tom Lane. Vous pouvez lire une démo rapide sur le [blog de Michael](http://michael.otacoo.com/postgresql-2/postgres-9-5-feature-highlight-import-foreign-schema/). Cette commande sera disponible dans la version 9.5.
 
 C'est une amélioration énorme ! Avec cet ``IMPORT`` et les douzaines de wrappers disponibles, PostgreSQL est en passe de devenir une plateforme d'intégration de données unique et le besoin d'utiliser des outils d'ETL externes devient de plus en plus faible. 
 
@@ -52,4 +52,4 @@ C'est une amélioration énorme ! Avec cet ``IMPORT`` et les douzaines de wrappe
 * [multicorn](http://multicorn.org/)
 * [IMPORT FOREIGN SCHEMA](http://www.postgresql.org/docs/devel/static/sql-importforeignschema.html)
 
-EDIT : Merci à Eric Pommereau pour la relecture !
+EDIT : Merci à Eric Pommereau et Guénolé Marquier pour la relecture !
