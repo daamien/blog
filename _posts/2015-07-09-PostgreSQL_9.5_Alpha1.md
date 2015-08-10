@@ -15,11 +15,11 @@ Voici un petit tour d'horizon de ce qui vous attend...
 
 Il est impossible de dresser une liste exhaustive des nouveautés et la sélection ci-dessous est tout à fait subjective :
 
-* La commande [IMPORT FOREIGN SCHEMA](http://www.depesz.com/2014/07/14/waiting-for-9-5-implement-import-foreign-schema/) va complètement changer la donne en ssimplifiant l'intégration de données (voir mon article sur les [70 nuances Postgres](http://blog.taadeem.net/french/2015/03/16/70_nuances_de_Postgres/)
+* La commande [IMPORT FOREIGN SCHEMA](http://www.depesz.com/2014/07/14/waiting-for-9-5-implement-import-foreign-schema/) va complètement changer la donne en simplifiant l'intégration de données (voir mon article sur les [70 nuances Postgres](http://blog.taadeem.net/french/2015/03/16/70_nuances_de_Postgres/)
 
 * Les [Index Block-Range](https://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.5#BRIN_Indexes) (BRIN) proposent une nouvelle méthode d'indexation ultra-compacte très utile pour les gros volumes de données 
 
-* La sécurité au niveaux des lignes ( ''Row Level Security'' ) permet désromais de définir des politiques d'accès en fonction du contenu d'une table. 
+* La sécurité au niveaux des lignes ( ''Row Level Security'' ) permet désormais de définir des politiques d'accès en fonction du contenu d'une table. 
 
 * La commande [INSERT ON CONFLICT UPDATE](https://www.youtube.com/watch?v=pbg97bkxbbY) plus connue sous le nom ''UPSERT'' était une fonctionnalité très attendue
 
