@@ -15,7 +15,7 @@ Cette réunion se tiendra en marge du salon Paris Open Source Summit. Si vous pa
 n'hésitez pas à venir sur le stand de la communauté PostgreSQL et à nous rejoindre pour l'assemblée
 le soir.
 
-L'ordre du jour provisoire est disponible ici: http://wiki.postgresql.fr/asso:ordre_du_jour_ag_2015
+L'ordre du jour provisoire est disponible ici: [http://wiki.postgresql.fr/asso:ordre_du_jour_ag_2015]()
 
 Merci de confirmer votre présence en envoyant un message à l'adresse bureau@postgresql.fr avant le
 17 novembre. 
