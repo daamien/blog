@@ -1,0 +1,21 @@
+---
+layout: post
+title: Mises à jour importante pour PostgreSQL 9.1 et 9.2
+---
+
+    <p>Le projet PostgreSQL sort aujourd'hui des mises à jour pour toutes les branches actives du SGBD PostgreSQL. Les nouvelles versions 9.2.1, 9.1.6, 9.0.10, 8.4.14 et 8.3.21 corrigent des problèmes critiques pour les versions majeures 9.1 et 9.2. Les utilisateurs de ces versions doivent appliquer ces mises à jour dès que possible. Les utilisateurs des versions 8.3, 8.4 et 9.0 peuvent planifier la mise à jour lors de la prochaine interruption de service programmée.</p>
+
+
+<p>Pour les versions 9.1 et 9.2, deux risques de corruptions de données ont été détectés suite à un arrêt brutal du serveur (crash), un arrêt avec l'option “immediate” ou une bascule vers un serveur en standby. Ces risques concernent les index (BTREE et GIN) et la carte de visibilité (visibility map).</p>
+
+
+<p>Cette mise à jour résout ces deux problèmes.</p>
+
+
+<p>Pour les utilisateurs de PostgreSQL 9.1 et 9.2, le risque est sérieux mais le correctif est très simple à appliquer. Il est fortement conseillé de faire cette mise à jour le plus tôt possible, puis de lancer un VACUUM et une réindexation progressive. L'ensemble ne prend que quelques minutes.»</p>
+
+
+<p>Voir l'annonce sur le site dalibo.org pour plus de détails&nbsp;: <a href="http://www.dalibo.org/nouvelles_versions_mineures_de_postgresql_9.2.1_9.1.6_9.0.10_8.4.14_8.3.21">http://www.dalibo.org/nouvelles_versions_mineures_de_postgresql_9.2.1_9.1.6_9.0.10_8.4.14_8.3.21</a></p>
+
+
+<p>Comme pour toutes les versions mineures, vous pouvez appliquer cette mise à jour avec un simple arrêt de PostgreSQL suivi d'une mise à jour des exécutables, puis de redémarrer PostgreSQL. Les utilisateurs de versions plus anciennes qui ont sauté plusieurs mises à jour mineures auront peut-être à effectuer d'autres actions suite à la mise à jour. Il est recommandé de consulter les notes de version pour plus de détails.</p>

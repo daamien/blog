@@ -1,0 +1,52 @@
+---
+layout: post
+title: 'Refonte de pgBadger en HTML5 : premier aperçu'
+---
+
+    <p><a href="http://dalibo.github.com/pgbadger/">PgBadger </a> est un outil puissant pour optimiser vos serveurs PostgreSQL. À partir des fichiers log de vos serveurs, pgBadger va analyser le trafic SQL et produire une profusion de statistiques (les plus longues requêtes, le ratio lecture/écriture, etc.) Tout ceci est très utile, mais la quantité de données générée est si importante que les rapports générés par pgbadger sont difficiles à lire et que les stats utiles sont souvent noyées dans le flot ... Pour vous en convaincre, jetez un coup d'oeil sur  cet  <a href="http://dalibo.github.com/pgbadger/example.html">exemple de rapport pgBadger </a>&nbsp;!</p>
+
+
+<p>comme je le disais dans mon <a href="http://blog.taadeem.net/index.php?post/2012/11/12/pgBadger-is-moving-fast">article précédent </a>, nous avons travaillé dur pour <a href="https://github.com/dalibo/pgbadger/wiki/HTML5-overhaul">redéfinir l'expérience utilisateur de pgBadger </a> et créer un nouveau modèle de rapport.</p>
+
+
+<p>Voici donc le premier aperçu du nouveau prototype (pour l'instant il s'agit simplement de code HTML statique, nous espérons présenter une démo interactive dans les prochaines semaines).</p>
+
+
+<p>Comme vous pouvez le voir, nous avons suivi quelques principes de base:</p>
+
+<ul>
+<li><strong> Divisez les grosses tables HTML en petites tables et utiliser des onglets pour naviguer de l'une à l'autre</strong>:</li>
+</ul>
+
+<p><a href="http://blog.taadeem.net/public/pgbadger_proto_1.png" title="pgbadger_proto_1.png"><img src="http://blog.taadeem.net/public/pgbadger_proto_1.png" alt="pgbadger_proto_1.png" style="display:block; margin:0 auto;" title="pgbadger_proto_1.png, janv. 2013" /></a></p>
+
+<ul>
+<li><strong> Laissez quelques espaces vides pour aérer et faciliter la lecture</strong>:</li>
+</ul>
+
+<p><a href="http://blog.taadeem.net/public/pgbadger_proto_2.png" title="pgbadger_proto_2.png"><img src="http://blog.taadeem.net/public/pgbadger_proto_2.png" alt="pgbadger_proto_2.png" style="display:block; margin:0 auto;" title="pgbadger_proto_2.png, janv. 2013" /></a></p>
+
+<ul>
+<li><strong> Masquer les tableaux derrière les graphes, lorsque c'est possible</strong>:</li>
+</ul>
+
+<p><a href="http://blog.taadeem.net/public/pgbadger_proto_3.png" title="pgbadger_proto_3.png"><img src="http://blog.taadeem.net/public/pgbadger_proto_3.png" alt="pgbadger_proto_3.png" style="display:block; margin:0 auto;" title="pgbadger_proto_3.png, janv. 2013" /></a></p>
+
+<ul>
+<li><strong> Mettre les infos détaillées dans des fenêtres popup que l'on peut masquer/afficher</strong>:</li>
+</ul>
+
+<p><a href="http://blog.taadeem.net/public/pgbadger_proto_4.png" title="pgbadger_proto_4.png"><img src="http://blog.taadeem.net/public/pgbadger_proto_4.png" alt="pgbadger_proto_4.png" style="display:block; margin:0 auto;" title="pgbadger_proto_4.png, janv. 2013" /></a></p>
+
+<ul>
+<li><strong> Mettre l'accent sur les «valeurs clés» en jouant sur la taille des polices</strong>:</li>
+</ul>
+
+<p><a href="http://blog.taadeem.net/public/pgbadger_proto_5.png" title="pgbadger_proto_5.png"><img src="http://blog.taadeem.net/public/pgbadger_proto_5.png" alt="pgbadger_proto_5.png" style="display:block; margin:0 auto;" title="pgbadger_proto_5.png, janv. 2013" /></a></p>
+
+
+
+<p>Tout cela n'a rien d'extraordinaire et ce n'est pas très original... Mais ce nouveau design sera sûrement plus lisible et  plus efficace. Nous espérons que cela va attirer de nouveaux utilisateurs et que cela sera apprécié par les utilisateurs existants.</p>
+
+
+<p>Si vous avez des commentaires ou des idées, n'hésitez pas à rejoindre à la <a href="https://listes.dalibo.com/cgi-bin/mailman/listinfo/pgbadger">liste de discussion du projet pgBadger </a>. Nous sommes à l'écoute&nbsp;!</p>

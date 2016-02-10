@@ -1,0 +1,38 @@
+---
+layout: post
+title: 'PG Session #3 : Bilan et perspectives'
+---
+
+    <p>La 3eme conférence "PG Session" s'est achevée il y a quelques jours et je vous propose ici un rapide compte-rende de cette journée à la fois riche et passionnante.</p>
+
+
+<p>Tout d'abord je tiens à remercier les orateurs qui nous ont fait l'honneur de participer à cette conférence, notamment&nbsp;: Michael Paquier (NTT Data Intellilink / Japon),  Simon Riggs (2nd Quadrant / Angleterre) et Ludovic Levesque (Fotolia / France). La qualité et la diversité de leurs interventions est la démonstration même de la richesse l'écosystème PostgreSQL&nbsp;!</p>
+
+
+<p>Sur la base des différents thèmes abordés, j'ai tiré les 4 pistes de réflexion suivantes&nbsp;:</p>
+
+
+<p>A/ <strong>La réplication interne de PostgreSQL est simple et mature</strong>. Le mécanisme Hot Standby répond à la grande majorité des besoins des entreprises&nbsp;: Haute-Disponibilité, Répartition des lectures, PRA...  Avec une configuration intuitive et bien documenté,  le Hot Standby s'est imposé en moins de 2 ans comme le système de réplication le plus populaire pour PostgreSQL.
+En bref si vous êtes à la recherche d'une solution de redondance pour vos données, mettez en place tout d'abord en place un Hot Standby vous serez rarement déçus&nbsp;!</p>
+
+
+<p>B/ Pour les besoins plus spécifiques telles que les réplications croisées, les clusters hétérogènes ou les réplication master-master, il existe <strong>un panel de solutions sophistiquées</strong>&nbsp;: Slony, Londiste, Bucardo sont autant de logiciels libres qui vous permettront de déployez des architectures complexes avec PostgreSQL</p>
+
+
+<p>C/ <strong>La scalabilité en écriture est la prochaine frontière à atteindre</strong>. L'objectif déclaré est de concurrencer directement  Oracle RAC. Plusieurs projets sont déjà très avancés dans cette voie&nbsp;: On peut notamment citer le prometteur <a href="http://postgres-xc.projects.postgresql.org/">Postgres-XC</a> qui devrait sortir en version 1.0 dans les semaines qui viennent. N'hésitez pas à tester ce projet et à renvoyer du feedback aux auteurs.</p>
+
+
+
+<p>D/ Quelque soit la solution de réplication choisie,  il est essentiel de <strong>ne pas négliger le temps de maintenance et le coût de la montée en compétence de vos équipes</strong>.  Cela tombe bien  car au delà de l'aspect open-source, PostgreSQL propose un véritable changement de paradigme économique&nbsp;: le coût total de possession (TCO) d'un systèmes de réplications . Avec un SGBD propriétaire, les licences seront le poste de dépenses le plus important.  Avec PostgreSQL,  le coût d'un cluster de réplication est le coût est avant tout humain&nbsp;: formation, conseil, support . En clair&nbsp;: plutôt que d'enrichir des milliardaires californiens , votre budget "réplication" sera convertit en services (audit de préconisation, support 24h/24, transfert de compétences, etc.) via une des nombreuses société qui compose l'écosystème PostgreSQL.</p>
+
+
+<p>De notre propre expérience chez Dalibo&nbsp;:  la plupart de clients qui sont passés d'Oracle à PostgreSQL sont séduits par cette approche à la fois pragmatique et humaine, aussi bien niveau technique que commercial&nbsp;!</p>
+
+
+<p>J'en profite d'ailleurs pour annoncer que la prochaine Session PostgreSQL se tiendra cet automne et abordera le sujet de la <strong>transition d'Oracle vers PostgreSQL</strong>&nbsp;: outil de migration, remplacer Data Guard, remplacer OEM, etc....   Si vous cherchez une alternative à Oracle, rendez- vous en septembre&nbsp;!</p>
+
+
+<p>D'ici là, <a href="http://www.dalibo.com/-Contact-">abonnez-vous à notre liste de diffusion</a> pour être tenu informés des dernières nouvelles de la communauté PostgreSQL....</p>
+
+
+<p>Vous pouvez également consulter les slides de orateurs sur le site des PG Sessions&nbsp;: <a href="http://www.postgresql-sessions.org/3/" title="http://www.postgresql-sessions.org/3/">http://www.postgresql-sessions.org/...</a></p>

@@ -1,0 +1,48 @@
+---
+layout: post
+title: 'PostgreSQL Session #4 : From Oracle to PostgreSQL'
+---
+
+    <p>As a nice coincidence the 4th <a href="http://www.postgresql-sessions.org/en/4/start">PostgreSQL Session</a> held Thursday, October 4 which was also the last day of Oracle Open World conference. Suffice to say that the two events didn't share the same definition of the word "Open"!</p>
+
+
+<p>As for the previous sessions organized by Dalibo, the room was full to listen to the various speakers.</p>
+
+
+<p>The morning speeches were devoted to migration tools themselves with three main methods: ora2pg, ETL or Foreign Data Wrapper:</p>
+
+<ul>
+<li>Jean-Paul Argudo opened the conference with a keynote to remind thechallenges of RDMS migrations.</li>
+<li>Guillaume Lelarge began with a brief presentation of the <a href="http://wiki.postgresql.org/wiki/What&#039;s_new_in_PostgreSQL_9.2">new features of PostgreSQL 9.2 </a></li>
+<li>Gilles Darold continued with a zoom on <a href="http://ora2pg.darold.net/">ora2pg </a>, the Oracle to PostgreSQL migration tool</li>
+<li>Marc Cousin described how to use  <a href="http://kettle.pentaho.com/">Kettle </a> (an open source ETL)</li>
+<li>Laurenz Albe, from Vienna, Austria, presented <a href="http://oracle-fdw.projects.postgresql.org/">oracle_fdw </a>, a data wrapper that can read Oracle tables from PostgreSQL</li>
+</ul>
+
+<p>The afternoon was an overview of the alternatives to traditional Oracle tools, including</p>
+
+<ul>
+<li>Gabriele Bartolini, founder of <a href="http://www.2ndquadrant.com/it/">2ndQuadrant Italy</a>, presented <a href="http://www.pgbarman.org/">Barman </a>, a backup tool that follows RMAN's footsteps</li>
+<li>Jehan-Guillaume De Rorthais described the new features of <a href="http://dalibo.github.com/pgbadger/">pgBadger </a>, a fast PostgreSQL log analyzer</li>
+<li>Finally Julien Rouhaud concluded with a presentation of <a href="https://github.com/postgres-xc/postgres-xc">PGXC </a>, a solution for symmetric replication ("Master-Master") which is a serious alternative for Oracle RAC.</li>
+</ul>
+
+<p>All presentations are available in PDF format here. Most the slides are in French, except Jean-Paul, Gabriele and Laurenz talks: <a href="http://www.postgresql-sessions.org/en/4/">http://www.postgresql-sessions.org/en/4/</a></p>
+
+
+<p>For my part, I presented the following conclusions during the closing keynote:</p>
+
+
+<p>1 - There are <strong>multiple ways to migrate from Oracle to PostgreSQL</strong>: according to your needs and the complexity of your database schema, you can use different tools. ora2pg is specialized and easy to implement. Kettle and  other ETL are very powerful and useful if you need to transform the data. And finally oracle_fdw is an original solution to migrate smoothly.</p>
+
+
+<p>2 - There's still some <strong>missing features in the PostgreSQL ecosystem</strong>: including comprehensive tools for partitioning or free alternatives to OEM. This leads many observers to judge that «Oracle is ahead of PostgreSQL». For my part, rather than looking at the position of each RDBMS at a given moment, I prefer to look at the innovation rate and the dynamic of each project ... And this 1-day conference showed us that the PostgreSQL community is currently in an extremely fertile and creative period. This extraordinary growth is the assurance that PostgreSQL will be a dominant RDBMS in the years to come. In other words: the PostgreSQL project is perhaps behind Oracle right now, but given its current speed it will quickly reach and surpass the competition.</p>
+
+
+<p>3 - As stated by Jean-Paul during the opening keynote, a DBMS migration is <strong> 10% about tools and 90% about human</strong>. The good news is that open source  is all about putting users above technology. Indeed, when moving from a proprietary database to PostgreSQL, the total cost of ownership (TCO) changes its nature: you no longer pay expensive licenses to a monopolistic giant. Instead your budget is redirected to "real services" (support, training, consulting) provided by local companies that are close to you. Switching to free software is not only a technical change, it is also (and above all) a revolution in the business relationships.</p>
+
+
+<p>Finally, I would like to warmly thank all those who made this conference possible especially Laurentz Albe and Gabriele Bartolini.</p>
+
+
+<p>The next PostgreSQL session will take place in early 2013. We are currently considering the theme of the day. Do not hesitate to submit your ideas and suggestions at <a href="http://blog.taadeem.net/index.php?post/2012/10/12/contact@postgresql-sessions.org">contact@postgresql-sessions.org </a>. And <a href="http://blog.taadeem.net/index.php?post/2012/10/12/https :/ /twitter.com/intent/follow?screen_name=Pgsession">Follow us on twitter </a>!</p>

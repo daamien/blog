@@ -1,0 +1,47 @@
+---
+layout: post
+title: 'Session PostgreSQL #4 : Migrer d''Oracle à PostgreSQL'
+---
+
+    <p>Hasard du calendrier la 4eme Session PostgreSQL se tenait jeudi 4 octobre, dernier jour de la conférence Oracle Open World. Autant dire tout de suite que les deux événements n'avaient pas la même définition du mot "Open"&nbsp;!</p>
+
+
+<p>Comme à chaque session, la salle était pleine pour écouter les interventions. La matinée fut consacrée en particulier aux outils de migrations eux-mêmes avec les 3 grandes méthodes&nbsp;: ora2pg, ETL ou Foreign Data Wrapper&nbsp;:</p>
+
+<ul>
+<li>Jean-Paul Argudo a ouvert la conférence avec une keynote pour rappeler les enjeux et les problématiques des migrations de SGBD</li>
+<li>Guillaume Lelarge	a débuté avec une présentation rapide des <a href="http://www.dalibo.org/annonce_9.2">nouveautés de PostgreSQL 9.2</a></li>
+<li>Gilles Darold	a poursuivi avec un zoom d' <a href="http://ora2pg.darold.net/">ora2pg</a> l'outil de migration Oracle vers PostgreSQL dont il est l'auteur</li>
+<li>Marc Cousin a décrit la mise en oeuvre de  <a href="http://kettle.pentaho.com/">Kettle</a> (un ETL open source)</li>
+<li>Laurenz Albe, DBA à la mairie de Vienne en Autriche, a présenté le connecteur <a href="http://oracle-fdw.projects.postgresql.org/">oracle_fdw</a> qui permet de lire des tables Oracle à partir de PostgreSQL</li>
+</ul>
+
+<p>L'après-midi fut l'occasion de faire un tour d'horizon des alternatives aux outils traditionnels d'Oracle, notamment</p>
+
+<ul>
+<li>Gabriele Bartolini, fondateur de 2ndQuadrant Italie,  a présenté <a href="http://www.pgbarman.org/">Barman</a>, un outil de backup qui marche sur les pas de  RMAN</li>
+<li>Jehan-Guillaume De Rorthais  a décrit les nouveautés de  <a href="http://dalibo.github.com/pgbadger/">pgBadger</a>, un outil d'analyses de traffic SQL</li>
+<li>Enfin Julien Rouhaud a conclu avec une présentation de <a href="https://github.com/postgres-xc/postgres-xc">PGXC</a>, une solution de réplication symétrique ("Master-Master") qui vient chasser les terres d'Oracle RAC.</li>
+</ul>
+
+<p>Toutes les présentations sont disponibles au format PDF ici&nbsp;:
+<a href="http://www.postgresql-sessions.org/4/start">http://www.postgresql-sessions.org/4/start</a></p>
+
+
+<p>Pour ma part, j'ai cloturé cette journée avec les conclusions suivantes&nbsp;:</p>
+
+
+<p>1- Pour migrer d'Oracle vers PostgreSQL, <strong>vous avez le choix des armes</strong>&nbsp;: selon vos besoins et la complexité de votre schéma de données, vous pouvez utiliser différents outils&nbsp;: ora2pg est spécialisé et très simple à mettre en oeuvre.  Kettle (et les autres ETL) sont très puissants et utiles si vous devez transformer les données. Enfin le connecteur oracle_fdw propose une solution originale pour migrer en douceur.</p>
+
+
+<p>2- PostgreSQL a encore <strong>un peu de chemin à parcourir dans certains domaines</strong>: notamment sur la partitionnement ou sur les alternatives à OEM. Cela conduit beaucoup d'observateurs a juger qu' "Oracle est en avance sur PostgreSQL". Pour ma part, je ne m'attache pas à regarder la position de chaque SGBD à un instant T. Je préfère m'intéresser à la dynamique de chaque projet... Et cette journée de conférence a bien montré que la communauté PostgreSQL est actuellement dans une phase de développement extra-ordinaire et l'essor actuel est l'assurance que PostgreSQL sera un SGBD dominant dans les années à venir. Pour le dire autrement, en prenant la métaphore de la course à pied&nbsp;: le projet PostgreSQL est peut-être en seconde position derrière Oracle, mais vu sa vitesse actuelle il va rapidement rejoindre et dépasser la concurrence.</p>
+
+
+<p>3- Comme l'a rappelé Jean-Paul en ouverture,  une migration de SGBD c'est <strong>10% de technique et 90% d'humain</strong>. La bonne nouvelle, c'est justement que l'open source remet l'humain au centre de la technologie. En effet, en passant d'un SGBD propriétaire à PostgreSQL, le cout de possession (TCO) change de nature: on ne paie plus de licences hors de prix à une multi-nationale&nbsp;! Le budget est réorienté vers du service (Support, Formation, Conseil) via des opérateurs locaux et multiples.
+Passer au logiciel libre ce n'est pas uniquement un changement technique, c'est aussi (et surtout) une révolution au niveau de la relation commerciale.</p>
+
+
+<p>Pour terminer, je remercie chaleuresement toute les personnes qui ont rendu cette journée possible notamment Laurentz Albe et Gabriele Bartolini.</p>
+
+
+<p>La prochaine session se tiendra début 2013. Nous réfléchissons actuellement au thème de cette journée. N'hésitez pas à nous soumettre vos idées et vos propositions à l'adresse <a href="http://blog.taadeem.net/index.php?post/2012/10/10/contact@postgresql-sessions.org">contact@postgresql-sessions.org</a>. Et pour rester informé, <a href="ttps://twitter.com/intent/follow?screen_name=pgsession">suivez-nous sur twitter</a>&nbsp;!</p>

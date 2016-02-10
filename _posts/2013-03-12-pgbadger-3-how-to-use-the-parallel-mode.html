@@ -1,0 +1,45 @@
+---
+layout: post
+title: 'pgBadger 3 : How to use the parallel mode'
+---
+
+    <p>Just like I said in a previous blog post&nbsp;: the <a href="http://blog.taadeem.net/index.php?post/2012/11/12/pgBadger-is-moving-fast">pgBadger projet is moving fast</a>&nbsp;! Version 3 was released a few days ago with a major improvements&nbsp;: With the new parallel mode, you can now launch mutiple pgBagder process at once&nbsp;!</p>
+
+
+<p><img src="http://blog.taadeem.net/public/badgers-4.jpg" alt="Beware !" style="display:block; margin:0 auto;" title="Beware !" /></p>
+
+
+<p>In others word, pgBadger is not bound to one cpu anymore. If you have multiple cores, you can now uses them to give more power and decrease the processing time. All you have to do is add the "-j N" option in the command line, where N is the number of cores you want to use. For instance&nbsp;:</p>
+
+
+<p><code>$ pgbadger -j 4 /var/log/postgresql/postgresql-2013-02-*</code></p>
+
+
+<p>Quick benchmark&nbsp;:  We had 5 log files with a total volume of 9.5 GB. Here's the results</p>
+
+<ul>
+<li>-j 1&nbsp;:  1h41m18s</li>
+<li>-j 2&nbsp;:  50m25s</li>
+<li>-j 4&nbsp;:  25m39s</li>
+<li>-j 8&nbsp;:  15m58s</li>
+</ul>
+
+<p><img src="http://blog.taadeem.net/public/pgbadger_benchmark.png" alt="pgbadger_benchmark.png" style="display:block; margin:0 auto;" /></p>
+
+
+<p>However it's important to note that the parallel mode has a little drawback. With this method, some queries may be truncated. If you enable N cores, then result may differ in a maximum of N queries per log file.</p>
+
+
+<p>However, this is a minor issue: parallel mode is interesting if you have millions of queries to analyze. And if you have millions of queries in a log file, you can afford to loose a few as it's quite unlikely that the lost queries would have changed the overall results.</p>
+
+
+<p>However, to avoid this problem, you can use the pgBadger "per-file parallel mode" to analyze your logs but with lower performance than the standard parallel mode. To enable this behaviour, you have to use the "-J N" option instead of "-j N". In per-file mode, the performances start being really interesting when there's hundreds of small log files (e.g. 10MB rotation size limit) and with at least 8 cores.</p>
+
+
+<p>We believe this new improvement will be a significant change for pgBadger users. If you have used the parallel mode, please send us feed back on our <a href="https://listes.dalibo.com/cgi-bin/mailman/listinfo/pgbagder" title="mailing list ">mailing list</a> or via the <a href="https://twitter.com/intent/follow?screen_name=pgbadger" title="pgBadger Twitter account">pgBadger twitter account</a>&nbsp;!</p>
+
+
+<p>And by the way, this is not the only big feature in pgBadger v3&nbsp;!  For the complete list of changes, please checkout the release note on <a href="https://github.com/dalibo/pgbadger/blob/master/ChangeLog">github</a></p>
+
+
+<p>And of course stay tuned.... because version 4 is coming fast :-)</p>

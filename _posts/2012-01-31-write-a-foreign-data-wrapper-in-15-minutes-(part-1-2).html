@@ -1,0 +1,42 @@
+---
+layout: post
+title: Write a Foreign Data Wrapper in 15 minutes (Part 1/2)
+---
+
+    <p>Among the <a href="http://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.1">long list of new features of PostgreSQL 9.1</a> the new SQL/MED implementation is probably of the most underrated. <a href="http://en.wikipedia.org/wiki/SQL/MED">SQL/MED</a> is an extension of the SQL standard defines foreign data wrappers (FDW) that allow you to reach data located outside of your database, with regular SQL request (MED stands for Management of External Data). In a nutshell, <a href="http://rhaas.blogspot.com/2011/01/why-sqlmed-is-cool.html">SQL/MED is cool</a>.</p>
+
+
+<p>As far as i know, PostgreSQL and DB2 are the only major RDBMS providing an implementation of this standard. The beauty with  PostgreSQL is that you can write your own data wrappers to connect your database to any storage you want ; other RDBMS, NoSQL storages, web services,  whatever system that holds data and can deliver it.</p>
+
+
+
+<p>Basically to <a href="http://www.postgresql.org/docs/9.1/static/fdwhandler.html">Write a Foreign Data Wrapper</a> you need to code <a href="http://www.postgresql.org/docs/9.1/static/fdw-callbacks.html">six callback routines in C</a> to explain how to plan and execute queries toward your new source of data.</p>
+
+
+<p>PostgreSQL 9.1 has been released a few month ago, but there's already a bunch of FDW available (even though most of them are still beta). At the time, I'm writing this we already have <a href="http://wiki.postgresql.org/wiki/Foreign_data_wrappers more than 15 wrappers" title="http://wiki.postgresql.org/wiki/Foreign_data_wrappers more than 15 wrappers">http://wiki.postgresql.org/wiki/For...</a>, so you can connect your PostgreSQL server to ; <a href="http://pgfoundry.org/projects/oracle-fdw/">Oracle</a>, <a href="http://github.com/dpage/mysql_fdw">MySQL</a>, <a href="http://multicorn.org/foreign-data-wrappers/#sqlite-foreign-data-wrapper">SQLlite</a>, <a href="https://github.com/ZhengYang/odbc_fdw">anything providing an ODBC driver</a>, <a href="https://github.com/guedes/ldap_fdw">LDAP</a>, <a href="https://github.com/ZhengYang/couchdb_fdw">couchdb</a>, <a href="https://github.com/dpage/redis_fdw">redis</a>, <a href="https://github.com/umitanuki/s3_fdw">Amazon S3 storage</a>, <a href="http://www.postgresql.org/docs/9.1/static/file-fdw.html">CSV files</a>, <a href="https://github.com/umitanuki/twitter_fdw">Twitter</a>, <a href="https://github.com/Kozea/Multicorn/blob/master/python/multicorn/googlefdw.py">Google Search</a>, <a href="https://github.com/cyga/www_fdw/">HTML pages</a>, <a href="http://multicorn.org/foreign-data-wrappers/#rss-foreign-data-wrapper">RSS feeds</a>, ....</p>
+
+
+<p>For an almost complete list, check out the PostgreSQL wiki ;
+<a href="http://wiki.postgresql.org/wiki/Foreign_data_wrappers" title="http://wiki.postgresql.org/wiki/Foreign_data_wrappers">http://wiki.postgresql.org/wiki/For...</a></p>
+
+
+<p>And of course these wrappers are packaged as extension and most of them are available on PGXN and quite easy to install :
+<a href="http://pgxn.org/tag/fdw/" title="http://pgxn.org/tag/fdw/">http://pgxn.org/tag/fdw/</a></p>
+
+
+<p>But there's more ! Among these FDW there's one called <a href="http://multicorn.org/">Multicorn</a>. This particular extension allows you to write FDW in Python. A wrapper over another wrapper. Basically this means you don't have to know C to write your own FDW and you can use high-level libraries from the Python world.</p>
+
+
+<p>Ok let's take a simple example. I'd like to query data contained in a web calendar like Google Calendar. Those data are available in ical files, with a specific format called iCalendar. So want i need to do is explain PostgreSQL how to reach and parse the files.</p>
+
+
+<p>With Python and Multicorn, this is done with 20 lines of code : see  <a href="https://github.com/daamien/Multicorn/blob/80e2ac7650d0a125b1eebb77c03cc77489cd134d/python/multicorn/icalfdw.py">icalfdw.py</a></p>
+
+
+<p>And that's it.</p>
+
+
+<p>Of course this is a basic implementation. We can do better with some optimizations and a few log handling. It's also important to keep in mind that  foreign data wrappers have strong limitations... I'll talk about all that and other things in my next blog post.</p>
+
+
+<p>In the meantime, if you're in Brussels this week-end for <a href="http://fosdem.org/2012/">FOSDEM</a> you can come to the <a href="http://fosdem.org/2012/schedule/track/postgresql_devroom">PostgreSQL Devroom</a>, I'll make a presentation of Multicorn along with its creator.</p>

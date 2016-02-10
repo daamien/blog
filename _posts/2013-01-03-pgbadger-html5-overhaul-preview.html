@@ -1,0 +1,52 @@
+---
+layout: post
+title: 'pgBadger HTML5 overhaul : preview'
+---
+
+    <p><a href="http://dalibo.github.com/pgbadger/">pgBadger</a> is a powerful tool to optimize your PostgreSQL servers. Using your server log files,  pgBadger will analyze the SQL traffic and produce a profusion of statistics (longest queries, read/write ratio, etc.). This is very helpful but the amount of data generated is so big that the pgbadger reports are hard to read and useful stats are often drown in the flood...  Check out this<a href="http://dalibo.github.com/pgbadger/example.html"> sample pgBadger report</a> to see the mess !</p>
+
+
+<p>Since my <a href="http://blog.taadeem.net/index.php?post/2012/11/12/pgBadger-is-moving-fast">previous blog post</a>, we've been working hard to <a href="https://github.com/dalibo/pgbadger/wiki/HTML5-overhaul">redefine the pgBadger user experience</a> and create a new report template.</p>
+
+
+<p>Here's the first draft of this new prototype (For now the draft is just static HTML code, we hope we'll have a live demo in the forthcoming weeks).</p>
+
+
+<p>As you can we followed a few basic principles :</p>
+
+<ul>
+<li><strong>Split the big HTML tables in smaller tables and use tab navigation to switch</strong> :</li>
+</ul>
+
+<p><a href="http://blog.taadeem.net/public/pgbadger_proto_1.png" title="pgbadger_proto_1.png"><img src="http://blog.taadeem.net/public/pgbadger_proto_1.png" alt="pgbadger_proto_1.png" style="display:block; margin:0 auto;" title="pgbadger_proto_1.png, janv. 2013" /></a></p>
+
+<ul>
+<li><strong>Leave some blank spaces to make the report easier to read</strong> :</li>
+</ul>
+
+<p><a href="http://blog.taadeem.net/public/pgbadger_proto_2.png" title="pgbadger_proto_2.png"><img src="http://blog.taadeem.net/public/pgbadger_proto_2.png" alt="pgbadger_proto_2.png" style="display:block; margin:0 auto;" title="pgbadger_proto_2.png, janv. 2013" /></a></p>
+
+<ul>
+<li><strong>Hide big tables behind graphs, when possible</strong> :</li>
+</ul>
+
+<p><a href="http://blog.taadeem.net/public/pgbadger_proto_3.png" title="pgbadger_proto_3.png"><img src="http://blog.taadeem.net/public/pgbadger_proto_3.png" alt="pgbadger_proto_3.png" style="display:block; margin:0 auto;" title="pgbadger_proto_3.png, janv. 2013" /></a></p>
+
+<ul>
+<li><strong>Put "full details" in popup windows that can you can hide/show when you need it</strong> :</li>
+</ul>
+
+<p><a href="http://blog.taadeem.net/public/pgbadger_proto_4.png" title="pgbadger_proto_4.png"><img src="http://blog.taadeem.net/public/pgbadger_proto_4.png" alt="pgbadger_proto_4.png" style="display:block; margin:0 auto;" title="pgbadger_proto_4.png, janv. 2013" /></a></p>
+
+<ul>
+<li><strong>Emphasize "key values" using a bigger font size</strong> :</li>
+</ul>
+
+<p><a href="http://blog.taadeem.net/public/pgbadger_proto_5.png" title="pgbadger_proto_5.png"><img src="http://blog.taadeem.net/public/pgbadger_proto_5.png" alt="pgbadger_proto_5.png" style="display:block; margin:0 auto;" title="pgbadger_proto_5.png, janv. 2013" /></a></p>
+
+
+
+<p>As you can see, there's nothing either out of the ordinary or very original here. But this new design will surely be easier to read and be more insightful. We hope it will  attract new users, while being more helpful for the existing user base.</p>
+
+
+<p>If you have any comment or ideas, please join the <a href="https://listes.dalibo.com/cgi-bin/mailman/listinfo/pgbadger">pgBadger mailing list</a> and get involved !</p>

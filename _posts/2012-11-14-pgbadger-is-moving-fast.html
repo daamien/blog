@@ -1,0 +1,42 @@
+---
+layout: post
+title: pgBadger is moving fast
+---
+
+    <p>When the pgBadger project started 6 month ago, our primary goal was to build a better performance tool for PostgreSQL. We also wanted it to be an open and dynamic project, built with the help of the Postgres community. So far  the result is beyond our expectations&nbsp;: we've received dozens of user requests, bug reports and contributions.</p>
+
+
+<p>Thanks to this community support, the project goes at a very fast pace&nbsp;! Today Gilles Darold released <a href="http://www.dalibo.org/pgbadger_2.2_released">pgBadger 2.2</a>. This new version comes with a bunch of exciting new features:</p>
+
+<ul>
+<li><a href="http://tsung.erlang-projects.org">Tsung</a> support&nbsp;: This means you can now create benchmark scenarios based on the queries contained in your PostgreSQL logs</li>
+<li>New parameters&nbsp;:  For instance with <code>--exclude-user</code> you can now ignore a user in the generated reports. With  <code>--select-only</code> you generate a report about the read queries...</li>
+<li>Faster CSV log parsing (thanks to David Fetter)</li>
+<li>Improved log format detection</li>
+<li>And many bugfixes....</li>
+</ul>
+
+<p>And there's more come&nbsp;! We're currently working on two major enhancements&nbsp;:</p>
+
+<ul>
+<li><strong>Multi-threading is on it's way</strong>&nbsp;: The last limitations have been removed and there's now a clear path to implement parallel parsing of the log files. pgBadger is already quite fast, but this will make it even faster. Especially on servers with many CPUs.</li>
+</ul>
+<ul>
+<li><strong>HTML5 Overhaul</strong>&nbsp;: For now pgBadger reports look pretty much like the ones produces by <a href="http://pgfouine.projects.pgfoundry.org">pgFouine</a>&nbsp;: i.e. it's just basic HTML aimed for a desktop screen. This was fine in 2005, but now we need a responsive design&nbsp;! Reports must be more interactive and readable on any devices. This is a tough job and as DBAs we have limited design skills :-) So we decided to hire a professional web design company to help us with&nbsp;: the French company <a href="http://www.artiscode.net/">art is code</a> will work with us to build a smarter report.</li>
+</ul>
+
+<p>Of course, we will involve the community while working on these two major improvements. If you want to participate and just keep in touch with the project, please join the <a href="https://listes.dalibo.com/cgi-bin/mailman/listinfo/pgbadger">pgBadger mailing list</a>. In a few week, we will submit the first draft of the new report design.</p>
+
+
+<p>In a nutshell&nbsp;: If you don't know what pgBadger is, give it a try&nbsp;! If you already use it, please upgrade to version 2.2&nbsp;! And if you've already installed v2.2, stay tuned because version 3 is coming fast&nbsp;!</p>
+
+
+<p>By the way, we're not alone... The whole postgres community seems to be buzzing with brand new performance tools&nbsp;! Over the past few weeks, at least 3 interesting projects popped up&nbsp;:</p>
+
+<ul>
+<li><a href="http://datascope.herokuapp.com/">datascope</a> is a nice tool to visualize pg_stat_statements data</li>
+<li><a href="http://www.2ndquadrant.com/en/pg_stat_plans/">pg_stat_plans</a> allows you to lists SQL statements by execution plan, not just by query.</li>
+<li><a href="https://github.com/omniti-labs/pgOtter">pgOtter</a> is yet another small mammal trying to parse your PostgreSQL logs ;-)</li>
+</ul>
+
+<p>At a personal level, I'm quite happy to see this happening and I bet this is just the beginning of a great move of the community toward better user-friendly tools for the PostgreSQL user base.</p>

@@ -1,0 +1,19 @@
+---
+layout: post
+title: Mises à jour mineures de PostgreSQL
+---
+
+    <p>Le groupe de développement de PostgreSQL vient de mettre à disposition une version corrective pour toutes les branches actives du projet. Cette mise à jour est mineure dans le sens où elle n'apporte pas de changements fonctionnels. Elle corrige 42 erreurs dont 2 problèmes majeurs découverts très récemment.</p>
+
+
+<p>Le premier est une instabilité pouvant conduire à un crash du serveur lors de l'utilisation de fonctions de type SECURITY DEFINER. La seconde concerne une faille de sécurité découverte dans la fonction crypt(). À noter que les projets PHP, OpenBSD et FreeBSD  sont aussi affectés par ce problème et ont diffusé leur propres correctifs.</p>
+
+
+<p>Le correctif pour PostgreSQL arrive moins d'une semaine après la détection de la faille de sécurité. Cette réactivité est la démonstration que PostgreSQL est plus sécurisant et plus transparent que les SGBDR propriétaires.</p>
+
+
+<p>Les utilisateurs qui ont installé l'extension pg_crypto doivent mettre à jour leurs serveurs immédiatement. Pour les autres, l'impact de ces deux problèmes est faible sur la sécurité des serveurs et le niveau de danger n'est pas alarmant. Toutefois, tous les utilisateurs de PostgreSQL sont invités à mettre à jour leur installation dès que possible. L'opération de mise à jour est simple et rapide. Elle ne nécessite pas de validations applicatives, ni de test de régression. La coupure de service induite par la mise à jour est très courte.</p>
+
+
+<p>Plus de détails sur&nbsp;:
+<a href="http://www.dalibo.org/nouvelles_versions_mineures_de_postgresql_9.1.4_9.0.8_8.4.12_8.3.19">dalibo.org</a></p>
