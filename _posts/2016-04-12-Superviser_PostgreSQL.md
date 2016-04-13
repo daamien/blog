@@ -16,10 +16,10 @@ Il y a quelques jours j'ai participé au [PG Day Paris 2016](http://www.pgday.pa
 Les slides de ma présentation sont disponibles ci-dessous :
 
 * Version HTML (avec videos): 
-[http://dalibo.github.io/presentations/slides/fr/20160331-supervision/prez.md.html]()
+[http://dalibo.github.io/presentations/slides/fr/20160331-supervision/prez.md.html](http://dalibo.github.io/presentations/slides/fr/20160331-supervision/prez.md.html)
 
 * Version PDF  (sans videos): 
-[http://dalibo.github.io/presentations/slides/fr/20160331-supervision/prez.beamer.pdf]()
+[http://dalibo.github.io/presentations/slides/fr/20160331-supervision/prez.beamer.pdf](http://dalibo.github.io/presentations/slides/fr/20160331-supervision/prez.beamer.pdf)
 
 Ma présentation s'est plutot bien déroulée et si j'en juge par les retours que j'ai eu le sujet intéresse beaucoup de mondes.
 
