@@ -4,6 +4,7 @@ layout: post
 title: Superviser PostgreSQL 
 category: french
 tags: [PostgreSQL Supervision]
+
 ---
 
 Il y a quelques jours j'ai participé au [PG Day Paris 2016](http://www.pgday.paris) en présentant un rapide tour d'horizon des solutions de supervision pour PostgreSQL. L'occasion de présenter l'état de l'art de l'écosystème Postgres en matière d'outil de visualisation !
@@ -37,6 +38,9 @@ Il s'agit d'un demi-oubli.... Certes le trio ElasticSearch + Logstash + Kibana e
 Tout système de supervision fera pression sur votre instance PostgreSQL et impactera ses performances. Je n'ai pas abordé ce sujet volontairement car je déteste présenter des résultats de benchmarks dans une conférence. Afficher des chiffres et des graphes pendant quelques secondes sans pouvoir donner tous les éléments de contexte est totalement contre-prodcutif et on court toujours le risque que les auditeurs prennent des résultats ponctuels pour de règles absolues. Pour moi, le message important ce n'est pas de dire "le logiciel X aura moins d'impact négatif que le logiciel Y" , mais au contraire "Faites vos propres benchmarks et sélectionner l'outil le plus adapté à votre trafic et à votre métier. Pour savoir comment réaliser un benchmarch, vous pouvez consulter le récit du match [PoWA vs The Badger](https://github.com/dalibo/powa/wiki/POWA-vs-pgBadger) réalisé en 2014.
 
 
+Au final, le PG Day Paris était une réussite et je remercie tous les organisateurs pour cet événement. 
+
+Prochain Rendez-vous : le [PG Day France](http://www.pgday.fr) à Lille le 31 mai! Cette fois j'y serai en tant qu'organisateur.
 
 
 
