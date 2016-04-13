@@ -11,14 +11,15 @@ Il y a quelques jours j'ai participé au [PG Day Paris 2016](http://www.pgday.pa
 
 <!-- MORE -->
 
-<p align=center>
-<img src='https://raw.githubusercontent.com/daamien/blog/gh-pages/_images/20160331_pgdayparis_superviser_postgresql.jpg'>
-</p>
+![](  https://raw.githubusercontent.com/daamien/blog/gh-pages/_images/20160331_pgdayparis_superviser_postgresql.jpg  )
 
 Les slides de ma présentation sont disponibles ci-dessous :
 
-* Version HTML (avec videos): [http://dalibo.github.io/presentations/slides/fr/20160331-supervision/prez.md.html]()
-* Version PDF  (sans videos): [http://dalibo.github.io/presentations/slides/fr/20160331-supervision/prez.beamer.pdf]()
+* Version HTML (avec videos): 
+[http://dalibo.github.io/presentations/slides/fr/20160331-supervision/prez.md.html]()
+
+* Version PDF  (sans videos): 
+[http://dalibo.github.io/presentations/slides/fr/20160331-supervision/prez.beamer.pdf]()
 
 Ma présentation s'est plutot bien déroulée et si j'en juge par les retours que j'ai eu le sujet intéresse beaucoup de mondes.
 
