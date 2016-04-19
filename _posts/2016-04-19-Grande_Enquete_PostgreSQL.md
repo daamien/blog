@@ -11,6 +11,7 @@ Le succès de PostgreSQL ne se dément pas mais il reste encore beaucoup de logi
 A chaque fois que je tiens un stand PostgreSQL dans un salon ou une conférence, une question classique revient 
 "Est-ce le logiciel X est compatible avec PostgreSQL ?". 
 
+
 Pour mieux comprendre quels sont les besoins en terme de compatibilité, Takayuki Tsunakawa vient de lancer un grand sondage 
 pour recenser les logiciels qui ne supportente pas encore PostgreSQL. L'occasion de mesurer le chemin à parcourir 
 chez les éditeurs....
