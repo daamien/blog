@@ -40,6 +40,13 @@ module JB
   end #Path
 end #JB
 
+# Default
+desc "Default"
+task :default do
+  puts "Defaut action : none"
+end #  task :default
+
+
 # Usage: rake post title="A Title" [date="2012-02-09"] [tags=[tag1,tag2]] [category="category"]
 desc "Begin a new post in #{CONFIG['posts']}"
 task :post do
