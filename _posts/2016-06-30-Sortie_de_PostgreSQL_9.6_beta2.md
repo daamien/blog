@@ -1,5 +1,5 @@
 ---
-date : 2016-06-30 09:52:14
+date : 2016-06-29 23:52:14
 layout: post
 title: "Sortie de PostgreSQL 9.6 beta 2"
 category: french
