@@ -37,7 +37,7 @@ author :
 production_url : http://blog.taadeem.net/
 #production_url : /
 
-theme: 
+mytheme: 
   name: dbyll
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
