@@ -4,7 +4,7 @@ layout: post
 title: "6 reasons to choose PostgreSQL 9.6"
 description: ""
 category: english
-tags: [PostgreSQL,parallelism,new features]
+tags: [PostgreSQL,parallelism]
 ---
 
 PostgreSQL 9.6 was released a few days ago and it's another huge milestone for the PostgreSQL community ! 
@@ -13,7 +13,7 @@ you will use PostgreSQL.
 
 <!-- More -->
 
-  ![](  https://c1.staticflickr.com/5/4002/4280292398_c5ca8c7176_z.jpg)
+  ![](  https://c1.staticflickr.com/5/4002/4280292398_c5ca8c7176_z.jpg  )
 
 1. **Parallelism** is probably the main attraction of this version : a long-awaited feature that will open the door to many new usecases. In a nutshell, in the previous versions, Postgres could only use one single core per query, even if other processors were available. The limitation is now over and many different forms of queries can use parallelism : sequential scans, joins and aggregates can now be run in parallel on multiple core, if you want to.
 
@@ -29,7 +29,9 @@ you will use PostgreSQL.
 
 Of course spotting only 6 items is a hard choice. They are many others enhancements in this release such as : Phrase Full Text Search, the pg_visibility extension, better vacuums on frozen pages, index-only scans for partial indexes, command progress reporting, and as always…… numerous performance improvements !
 
-For a detailed view of this version, the wiki page below is a nice starting point : https://wiki.postgresql.org/wiki/NewIn96
+For a detailed view of this version, the wiki page below is a nice starting point : [https://wiki.postgresql.org/wiki/NewIn96](https://wiki.postgresql.org/wiki/NewIn96)
+
+
 
 
 ``Photo Credit :`` [duncan @ Flickr](https://www.flickr.com/photos/duncan/4280292398/sizes/z/) CC BY-NC
