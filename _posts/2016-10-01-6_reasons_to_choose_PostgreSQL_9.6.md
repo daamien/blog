@@ -30,3 +30,6 @@ you will use PostgreSQL.
 Of course spotting only 6 items is a hard choice. They are many others enhancements in this release such as : Phrase Full Text Search, the pg_visibility extension, better vacuums on frozen pages, index-only scans for partial indexes, command progress reporting, and as always…… numerous performance improvements !
 
 For a detailed view of this version, the wiki page below is a nice starting point : https://wiki.postgresql.org/wiki/NewIn96
+
+
+``Photo Credit :`` [duncan @ Flickr](https://www.flickr.com/photos/duncan/4280292398/sizes/z/) CC BY-NC
