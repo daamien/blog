@@ -3,7 +3,7 @@ date: 2016-10-03 11:17:36
 layout: post
 title: "6 raisons de choisir PostgreSQL 9.6"
 description: ""
-category: français
+category: french
 tags: [PostgreSQL,parallelisme, parallelisation]
 ---
 
