@@ -18,12 +18,12 @@ PostgreSQL.
   ![](  https://c1.staticflickr.com/5/4002/4280292398_c5ca8c7176_z.jpg  )
 
 1. **Le "Parallelisme"** est probablement l'attraction principale de cette version : 
-une fonctionnalité réclamée depuis des années. Pour résumer : avec les versions
-précédentes, Postgres utilisait uniquement un seul cœur par requête, même
-d'autres processeurs étaient disponibles. Cette limititation vient d'être 
-supprimée et différentes formes d'opérations peuvent désormais être effectuée 
-en parallèle : parcours séquentiels, jointures et agregats peuvent être distribuée
-sur plusieurs cœurs, si nécessaire.
+   une fonctionnalité réclamée depuis des années. Pour résumer : avec les versions
+   précédentes, Postgres utilisait uniquement un seul cœur par requête, même
+   d'autres processeurs étaient disponibles. Cette limitation vient d'être 
+  supprimée et différentes formes d'opérations peuvent désormais être effectuée 
+  en parallèle : parcours séquentiels, jointures et agregats peuvent être distribuée
+  sur plusieurs cœurs, si nécessaire.
 
 
 2. **Un meilleur suivi des verrous** : la vue  ``pg_stat_activity`` fournit 
@@ -37,7 +37,7 @@ d'étranglement.
 
 3. **La réplication synchrone multi-noeuds** vous garantit qu'une transaction 
 est appliquées simultanément sur plusieurs instances. Cela permet de renforcer
-la durabilité des données et en dupliquent les données sur plusieurs instances
+la durabilité des données et en dupliquant les données sur plusieurs instances
 parfaitement identiques.
 
 
@@ -45,13 +45,13 @@ parfaitement identiques.
 curseurs pouvait empêcher le nettoyage des lignes mortes et provoquer un 
 gonflement ("bloat") des volumes de stockage, ce qui impactait les performances et 
 causait une surconsommation d'espace disque.  La nouvelle option 
-``old_snapshot_threshold`` autorise PostgreSQL à nettoyer un ligne morte lorsque
+``old_snapshot_threshold`` autorise PostgreSQL à nettoyer une ligne morte lorsque
  la transaction qui l'a modifiée est terminée et que les snapshots qui peuvent
 encore la voir ont dépassé un certain age.
 
 5. **Des améliorations sur les Data Wrappers** : Avec plus de 80 connecteurs 
 externes (FDW) vous pouvez déjà brancher PostgreSQL sur n'importe quel système
-de stckage de données. La version 9.6 apporte des nouveautés importantes sur le 
+de stockage de données. La version 9.6 apporte des nouveautés importantes sur le 
 connecteur postgres_fdw, notamment le transfert ( "push down") des jointures et 
 des tris sur le nœud distant. Une avancée fondamentale pour agréger des données
 à partir de plusieurs instances PostgreSQL.  
