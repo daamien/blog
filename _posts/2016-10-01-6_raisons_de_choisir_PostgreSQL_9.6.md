@@ -20,15 +20,15 @@ PostgreSQL.
 1. **Le "Parallelisme"** est probablement l'attraction principale de cette version : 
    une fonctionnalité réclamée depuis des années. Pour résumer : avec les versions
    précédentes, Postgres utilisait uniquement un seul cœur par requête, même
-   d'autres processeurs étaient disponibles. Cette limitation vient d'être 
-  supprimée et différentes formes d'opérations peuvent désormais être effectuée 
-  en parallèle : parcours séquentiels, jointures et agregats peuvent être distribuée
-  sur plusieurs cœurs, si nécessaire.
+   si d'autres processeurs étaient disponibles. Cette limitation vient d'être 
+   supprimée et différentes formes d'opérations peuvent désormais être effectuée 
+   en parallèle : parcours séquentiels, jointures et agregats peuvent être distribuée
+   sur plusieurs cœurs, si nécessaire.
 
 
 2. **Un meilleur suivi des verrous** : la vue  ``pg_stat_activity`` fournit 
 désormais des infos plus précises sur les blocages ("wait events"). Lorsqu'un
-processus est en attente sur un verrou, vous pouver voir le type du verrous et 
+processus est en attente sur un verrou, vous pouvez voir le type du verrou et 
 des détails sur le contexte du blocage.  Par ailleurs, avec la fonction 
 ``pg_blocking_pids()`` vous pouvez voir ce qui bloque un processus donné. 
 Ces outils de monitoring vont permettre aux DBA de savoir combien de temps un
@@ -67,13 +67,14 @@ Bien sûr retenir uniquement 6 items dans la liste des nouveautés de Postgres
 9.6 est un choix difficile. Il y a beaucoup d'autres améliorations dans cette 
 version, par exemple : le rechercher plein texte sur des phrases entières, 
 l'extension pg_visibility, un meilleur nettoyage (VACUUM) des pages gelées, les
-parcours unique d'index pour les index partiels, le suivi de la progression
+parcours uniques d'index pour les index partiels, le suivi de la progression
 des commandes, et comme d'habitude.... une flopée de gains de performance !
 
 
 Pour un tour d'horizon plus détaillé, la page de wiki [What's New in 9.6](https://wiki.postgresql.org/wiki/NewIn96)
 est un bon point de départ !
 
+``NB :``  Merci à Hervé Piedvache et Jean-Louis Louër pour la relecture
 
 
-``Photo Credit :`` [duncan @ Flickr](https://www.flickr.com/photos/duncan/4280292398/sizes/z/) CC BY-NC
+``Crédit Photo :`` [duncan @ Flickr](https://www.flickr.com/photos/duncan/4280292398/sizes/z/) CC BY-NC
