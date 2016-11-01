@@ -2,7 +2,7 @@
 date: 2016-11-01 15:17:36 
 layout: post
 title: "PG Magazine presents : The Paper Elephant #01"
-description: ""
+description: "The PostgreSQL Magazine project is back with an original concept named **The Paper Elephant**"
 category: english
 tags: [PostgreSQL,pgmag, newspaper]
 ---
@@ -21,7 +21,7 @@ Hans-Jürgen Schönig writes about performance and Craig Kierstens an overview o
 You'll also find an interview of Paul Ramsey from the PostGIS project.
 
 The Paper Elephant is an independent media edited by and for the PostgreSQL Community.
-This issue was created with the financial help of [[https://www.postgresql.eu|PostgreSQL Europe]] 
+This issue was created with the financial help of [PostgreSQL Europe](https://www.postgresql.eu)
 and many benevolent contributors ( witers, editors, reviewers ). Kudos to all of them. 
 
 Just like the name says, The Paper Elephant is a "paper first" media: it is designed to be printed out 
