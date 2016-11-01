@@ -1,7 +1,7 @@
 ---
 date: 2016-11-01 15:17:36 
 layout: post
-title: "PG Magazine presents : The Paper Elephant #01"
+title: "PostgreSQL Magazine presents : The Paper Elephant #01"
 description: "The PostgreSQL Magazine project is back with an original concept named **The Paper Elephant**"
 category: english
 tags: [PostgreSQL,pgmag, newspaper]
