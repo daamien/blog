@@ -41,4 +41,4 @@ That's all for today ! I'll make another post in a few days to explain the featu
 Meanwhile I want take some time to test this tool please send us an email at [contact@dalibo.com](mailto:contact@dalibo.com) and let us know what you think about it,  what features are missing for you, etc. Temboard is still in early development stage and we plan to add more plugins in the forthcoming month ! 
 
 
-''EDIT: Typos''
+``EDIT: typos``
