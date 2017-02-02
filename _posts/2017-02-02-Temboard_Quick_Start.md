@@ -7,7 +7,7 @@ category: english
 tags: [PostgreSQL, GUI, control, management]
 ---
 
-The next challenge for the PostgreSQL is to provide feature rich and well-designed graphic tools to manage several instances. This is a domain where we can make a lot of progress and [Temboard](https://github.com/dalibo/temboard) is one of the current projects (among others) that aims to provide a nice management tool for PostgreSQL.
+The next challenge for the PostgreSQL community is to provide feature rich and well-designed graphic tools to manage several instances. This is a domain where we can make a lot of progress and [Temboard](https://github.com/dalibo/temboard) is one of the current projects (among others) that aims to provide a nice management tool for PostgreSQL.
 
 <!-- More -->
 
@@ -19,7 +19,7 @@ environment composed of 3 PostgreSQL instances and a central Temboard server.
 1- [Install docker](https://docs.docker.com/engine/installation/) 
    and [Install docker-compose](https://docs.docker.com/compose/install/)
 
-2- Fetch our pre-configured compose file and launch it
+2- Fetch our pre-configured `docker compose` file and launch it
 
 ```
 wget https://raw.githubusercontent.com/dalibo/docker/master/temboard/docker-compose.yml
@@ -30,7 +30,7 @@ docker-compose up
 
 * Connect to the Temboard server with `admin / admin`
 * Connect to each Postgres instance with `alice / alice`
-* The temboard server is listening to the local LAN
+* You can find more tips in our doc at  http://temboard.readthedocs.io/en/latest/
 
 You should see something like this :
 
