@@ -30,7 +30,7 @@ docker-compose up
 
 * Connect to the Temboard server with `admin / admin`
 * Connect to each Postgres instance with `alice / alice`
-* You can find more tips in our doc at  http://temboard.readthedocs.io/en/latest/
+* You can find more tips in our doc at  <http://temboard.readthedocs.io/en/latest/>
 
 You should see something like this :
 
