@@ -1,0 +1,47 @@
+---
+date: 2017-02-02 10:17:36 
+layout: post
+title: "PostgreSQL Temboard : Guide de Démarrage "
+description: "Temboard est un nouvel outil graphique pour Postgres"
+category: french
+tags: [PostgreSQL, GUI, control, management, outil, monitoring]
+---
+
+Le prochain défi pour la communauté PostgreSQL est de produire des outils graphiques riches et bien conçus.
+C'est un domain dans lequel nous avons une grande marge de progression et 
+[Temboard](https://github.com/dalibo/temboard) est un des projets (parmi d'autres) qui a l'ambition de 
+devenir un outil graphique pour PostgreSQL.
+
+<!-- More -->
+
+![Temboard : PostgreSQL Remote Control](http://temboard.readthedocs.io/en/latest/temboard.png)
+
+Puisque que nous parlons d'un outil graphique, allons directement jetez un coup d'oeuil ! 
+Voici 3 étapes pour déployer un environement de test composé de 3 instances Postgres et un serveur central Temboard.
+
+1- [Installer docker](https://docs.docker.com/engine/installation/) 
+   et [Installer docker-compose](https://docs.docker.com/compose/install/)
+
+2- Récuperer fichier `docker compose` pré-configuré et le lancer
+
+```
+wget https://raw.githubusercontent.com/dalibo/docker/master/temboard/docker-compose.yml
+docker-compose up
+```
+
+3- Aller sur <https://127.0.0.1:8888>
+
+* Connectez-vous sur le serveur Temboard avec les codes `admin / admin`
+* Connectez-vous sur chaque instance Postgres avec `alice / alice`
+
+Vous devriez voir apparaitre quelque chose comme ça : 
+
+![Temboard PostgreSQL Dashboard](https://github.com/dalibo/temboard/raw/master/doc/demo_dashboard.gif)
+
+C'est tout pour aujourd'hui ! Je ferai un autre article prochainement pour présenter les fonctionnalités de Temboard 
+notamment le tableau de bord, la versionnement des fichiers `postgresql.conf`, comment tuer une transaction, etc.
+
+En attendant si vous prenez le temps de tester cet outil, envoyez nous un message à 
+[contact@dalibo.com](mailto:contact@dalibo.com) et dites-nous ce que vous en pensez, quelle fonctionnalités vous manquent !
+
+Temboard est encore un projet très jeune et nous avons prévu d'ajouter plus de plugins dans les mois à venir ! 
