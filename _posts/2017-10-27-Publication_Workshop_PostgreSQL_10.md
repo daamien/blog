@@ -16,7 +16,7 @@ via github.
 <!-- More -->
 
 [![PostgreSQL 10
-Workshop](_images/cover_workshop_10.png)](https://cloud.dalibo.com/p/exports/formation/workshops/fr/100-postgresql_10.pdf)
+Workshop](https://github.com/daamien/blog/raw/gh-pages/_images/cover_workshop_10.png)](https://cloud.dalibo.com/p/exports/formation/workshops/fr/100-postgresql_10.pdf)
 
 Vous pouvez retrouver nos deux derniers workshops sur ce dépot :
 
