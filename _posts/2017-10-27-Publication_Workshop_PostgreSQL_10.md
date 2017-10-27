@@ -15,6 +15,8 @@ via github.
 
 <!-- More -->
 
+[![PostgreSQL 10
+Workshop](_images/cover_workshop_10.png)](https://cloud.dalibo.com/p/exports/formation/workshops/fr/100-postgresql_10.pdf)
 
 Vous pouvez retrouver nos deux derniers workshops sur ce dépot :
 
@@ -35,7 +37,7 @@ Installation et Compilation
 --------------------------------------------------------------------------------------------
 
 Vous pouvez compiler ces documents vous-mêmes en utilisant a une [image docker
-prévue à cet effet] (https://github.com/dalibo/workshops/blob/master/QUICKSTART.md) 
+prévue à cet effet](https://github.com/dalibo/workshops/blob/master/QUICKSTART.md) 
 ou [installer la chaine de production complète](https://github.com/dalibo/workshops/blob/master/INSTALL.md) 
 en local (basée sur debian). 
 
