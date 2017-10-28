@@ -14,15 +14,43 @@ tags: [PostgreSQL, GUI ]
 The very first [PostgreSQL Graphic Tools Developer
 Meeting](https://wiki.postgresql.org/wiki/PostgreSQL_Graphic_Tools_Developper_Meeting_2017) 
 happened last week during [PostgreSQL Conference Europe 2017](https://2017.pgconf.eu) 
-in Warsaw. The meeting gathered 16 developpers from 14 software (KEXI, Postico,
-Postgres.app, pgAdmin, DBeaver, SQL Tabs, pg_view, bg_mon, pgBadger, pgFormatter,
-Postgres Professional Manager, temBoard, PoWA, pgDevOps, temBoard) and 11 different
-organizations (EnterpriseDB, OpenSCG, PostgresPro, EggerApps, Crunchy Data, Dalibo,
-EnterpriseDB, KDE, 2nd Quadrant, Rider Soft, Zalando)
+in Warsaw. The meeting gathered 16 developpers from 14 software (
+[KEXI](), 
+[Postico](),
+[Postgres.app](), 
+[pgAdmin](), 
+[DBeaver](), 
+[pgCluu]()
+[SQL Tabs](), 
+[pg_view](), 
+[bg_mon](), 
+[pgBadger](), 
+[pgFormatter](),
+[Postgres Professional Manager](), 
+[temBoard](),
+[PoWA](), 
+[pgDevOps](), 
+[temBoard]()
+) and 10 different organizations (
+[EnterpriseDB](), 
+[OpenSCG](), 
+[PostgresPro](), 
+[EggerApps](), 
+[Crunchy Data](), 
+[Dalibo](https://dalibo.com/),
+[KDE](http://kde.org/), 
+[2nd Quadrant](),
+[Rider Soft](),
+[Zalando]()
+)
 
-Here's a quick summary.
+Here's my personal report from the meeting, you can also find a more general summary on the PostgreSQL wiki: 
+
+<https://wiki.postgresql.org/wiki/PostgreSQL_Graphic_Tools_Developper_Meeting_2017>
 
 <!--MORE-->
+
+![PostgreSQL Graphic Tools Developer Meeting](/_images/pgtdm.jpg)
 
 PostgreSQL is the best open source database ever and its community is packed
 with brilliant people. But there's always room for improvements and the graphic
@@ -39,17 +67,17 @@ We are divided
 The meeting is just a small part of the whole picture. When we prepared this
 event with [leo cossic](https://github.com/leorenc) we identified more than 60 developers 
 actively working on 35 different tools. This does not include the inactive
-projects such as PhpPgAmin and the ones we forgot (apalogies to Datagrip and Elephant
-Shed !).
+projects such as [PhpPgAmin](FIXME) and the ones we forgot (apologies to 
+[Datagrip](FIXME) and [Elephant Shed](FIXME) !).
 
 Now let's compare this to other competitors : Oracle DBAs have `Grid Control` or
 `TOAD`. MySQL users have `PhpMyAdmin` or `Workbench`. For MSSQL
-Server, the `SQL Server Management Studio` is pretty much your only choice.
+Server, the `Management Studio` is pretty much your only choice.
 
 Of course open source is all about diversity, but at some point too much choice is
 becoming a problem. New PostgreSQL users are getting really confused by this
-profusion of tools and the comminty workforce is split in separate projects. All 
-in all it is slowing down the PostgreSQL adoption.
+profusion of tools and the comminty workforce is split in separate projects. 
+All in all it is slowing down the PostgreSQL adoption.
 
 __What can we do about it ?__ We need to raise awareness of the community and
 make a better at promoting the existing solutions. The message must be clear :
@@ -63,8 +91,8 @@ We don't talk to each other
 The PostgreSQL code base is developped and maintained by a swarm of developers
 from all over the world, communicating constantly together... If you subscribed
 to the psql-hackers mailing list, you know that it's humanly impossible to
-follow every discussions on a daily basis. However when it comes about Graphic
-Tools, the situation is completely opposite. There's little discussion happening
+follow every discussions on a daily basis. However when it comes about graphic
+tools, the situation is completely opposite. There's little discussion happening
 between the different developpers. Every project seems like an oasis in the
 middle of the desert.
 
@@ -81,10 +109,11 @@ mailing list is probably the best starting point.
 We lack basic UI/UX design skills 
 -------------------------------------------------------------------------------
 
-No offense to anyone. Developing a database management tool is hard and most of
+No offense to anyone FIXME. Developing a database management tool is hard and most of
 the GUI developpers I know are primarily DBAs. Very often, they created their 
-software for their own need and they're doing their best to build a nice interface. 
-But we're in competion against some big companies (Oracle, Microsoft and others).  
+software for their own need and they're doing their best to build a nice 
+interface. But we're in competition against some big companies (Oracle, 
+Microsoft and others) and they investing a lot in this area. 
 FIXME
 
 __What can we do about it ?__ If you're a PostgreSQL company, please hire UI/UX
@@ -95,14 +124,17 @@ knowledge.
 We don't know our users
 -------------------------------------------------------------------------------
 
-Among the projects presented during the meeting, very few add conducted a proper
+Among the projects presented during the meeting, very few add conducted proper
 [User Research](https://en.wikipedia.org/wiki/User_Research). In fact, most of
 them didn't clearly define what is their user base. Again I'm not blaming the 
-developpers here, but FIXME
+developpers here, but if we want to improve the PostgreSQL users experience, we 
+need a better understanding of who our users are, what they want and how they 
+use our software.  
 
-FIXME
+Waiting passively for user feedbacks and bug reports is not enough !
 
-__What can we do about it ?__ Again UI/UX design 
+__What can we do about it ?__ Again there are multiple tools and methods in the 
+UI/UX design domain that we can learn, adapt and share : [personas](FIXME), [user interviews](FIXME), 
 
 
 
@@ -126,6 +158,15 @@ while but hopefully we'll get there.
 
 Now What ? 
 -------------------------------------------------------------------------------
+
+This first meeting left me with lots of questions [FIXME] but also hopes that 
+we will see big improvements in this area and the forthcoming years.
+
+In fact, PostgreSQL is now so feature-rich (FIXME) that we've now reached a 
+point where the new challenges are outside the database core. Improving our 
+Graphic tools is one of these and if we can gather only 10% of the community 
+collective intelligence (FIXME) on this matter, we're going to make great 
+things. 
 
 
 
