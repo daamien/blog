@@ -14,34 +14,34 @@ tags: [PostgreSQL, GUI ]
 The very first [PostgreSQL Graphic Tools Developer
 Meeting](https://wiki.postgresql.org/wiki/PostgreSQL_Graphic_Tools_Developper_Meeting_2017) 
 happened last week during [PostgreSQL Conference Europe 2017](https://2017.pgconf.eu) 
-in Warsaw. The meeting gathered 16 developpers from 14 software (
-[KEXI](), 
-[Postico](),
-[Postgres.app](), 
-[pgAdmin](), 
-[DBeaver](), 
-[pgCluu]()
-[SQL Tabs](), 
-[pg_view](), 
-[bg_mon](), 
-[pgBadger](), 
-[pgFormatter](),
-[Postgres Professional Manager](), 
-[temBoard](),
-[PoWA](), 
-[pgDevOps](), 
-[temBoard]()
-) and 10 different organizations (
-[EnterpriseDB](), 
-[OpenSCG](), 
-[PostgresPro](), 
-[EggerApps](), 
-[Crunchy Data](), 
+in Warsaw. The meeting gathered 16 developpers repesenting 14 software (
+[KEXI](http://www.kexi-project.org/), 
+[Postico](https://eggerapps.at/postico/),
+[Postgres.app](https://postgresapp.com/), 
+[pgAdmin](https://www.pgadmin.org/), 
+[DBeaver](https://dbeaver.jkiss.org/), 
+[pgCluu](http://pgcluu.darold.net/)
+[SQL Tabs](https://www.sqltabs.com/), 
+[pg_view](https://github.com/zalando/pg_view), 
+[bg_mon](https://github.com/CyberDem0n/bg_mon), 
+[pgBadger](http://dalibo.github.io/pgbadger/), 
+[pgFormatter](https://github.com/darold/pgFormatter),
+Postgres Professional Manager (not released yet), 
+[temBoard](http://temboard.io/),
+[PoWA](http://dalibo.github.io/powa/), 
+[pgDevOps](https://www.openscg.com/bigsql/pgdevops/), 
+) 
+and 10 different organizations (
+[EnterpriseDB](https://www.enterprisedb.com/), 
+[OpenSCG](https://www.openscg.com/), 
+[PostgresPro](https://postgrespro.com/), 
+[EggerApps](https://eggerapps.at/), 
+[Crunchy Data](https://www.crunchydata.com/), 
 [Dalibo](https://dalibo.com/),
 [KDE](http://kde.org/), 
-[2nd Quadrant](),
-[Rider Soft](),
-[Zalando]()
+[2nd Quadrant](https://www.2ndquadrant.com),
+[Rider Soft](https://dbeaver.com/contacts/),
+[Zalando](https://www.zalando.fr/)
 )
 
 Here's my personal report from the meeting, you can also find a more general summary on the PostgreSQL wiki: 
@@ -67,8 +67,8 @@ We are divided
 The meeting is just a small part of the whole picture. When we prepared this
 event with [leo cossic](https://github.com/leorenc) we identified more than 60 developers 
 actively working on 35 different tools. This does not include the inactive
-projects such as [PhpPgAmin](FIXME) and the ones we forgot (apologies to 
-[Datagrip](FIXME) and [Elephant Shed](FIXME) !).
+projects such as [PhpPgAmin](http://phppgadmin.sourceforge.net/) and the ones we forgot (apologies to 
+[Datagrip](https://www.jetbrains.com/datagrip/) and [Elephant Shed](https://github.com/credativ/elephant-shed) !).
 
 Now let's compare this to other competitors : Oracle DBAs have `Grid Control` or
 `TOAD`. MySQL users have `PhpMyAdmin` or `Workbench`. For MSSQL
@@ -109,7 +109,7 @@ mailing list is probably the best starting point.
 We lack basic UI/UX design skills 
 -------------------------------------------------------------------------------
 
-No offense to anyone FIXME. Developing a database management tool is hard and most of
+No offense to anyone here. Developing a database management tool is hard and most of
 the GUI developpers I know are primarily DBAs. Very often, they created their 
 software for their own need and they're doing their best to build a nice 
 interface. But we're in competition against some big companies (Oracle, 
@@ -134,7 +134,11 @@ use our software.
 Waiting passively for user feedbacks and bug reports is not enough !
 
 __What can we do about it ?__ Again there are multiple tools and methods in the 
-UI/UX design domain that we can learn, adapt and share : [personas](FIXME), [user interviews](FIXME), 
+UI/UX design domain that we can learn, adapt and share : 
+[personas](https://en.wikipedia.org/wiki/Persona_(user_experience)), 
+[user interviews](https://www.interaction-design.org/literature/article/how-to-conduct-user-interviews), 
+[User Experience Evaluation](https://en.wikipedia.org/wiki/User_experience_evaluation),
+etc.
 
 
 
