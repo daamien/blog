@@ -67,10 +67,12 @@ We are divided
 The meeting is just a small part of the whole picture. When we prepared this
 event with [leo cossic](https://github.com/leorenc) we identified more than 60 developers 
 actively working on 35 different tools. This does not include the inactive
-projects such as [PhpPgAmin](http://phppgadmin.sourceforge.net/) and the ones we forgot (apologies to 
-[Datagrip](https://www.jetbrains.com/datagrip/) and [Elephant Shed](https://github.com/credativ/elephant-shed) !).
+projects such as [PhpPgAmin](http://phppgadmin.sourceforge.net/) and the ones we 
+forgot (apologies to 
+[Datagrip](https://www.jetbrains.com/datagrip/) 
+and [Elephant Shed](https://github.com/credativ/elephant-shed) !).
 
-Now let's compare this to other competitors : Oracle DBAs have `Grid Control` or
+Now let's compare this to other competitors : Oracle DBAs have `Cloud Control` or
 `TOAD`. MySQL users have `PhpMyAdmin` or `Workbench`. For MSSQL
 Server, the `Management Studio` is pretty much your only choice.
 
@@ -113,8 +115,9 @@ No offense to anyone here. Developing a database management tool is hard and mos
 the GUI developpers I know are primarily DBAs. Very often, they created their 
 software for their own need and they're doing their best to build a nice 
 interface. But we're in competition against some big companies (Oracle, 
-Microsoft and others) and they investing a lot in this area. 
-FIXME
+Microsoft and others) and they investing a lot in this area. Instread of tyring
+to copycat compititing like `Oracle Cloud Control` or `PhpMyAdmin`, we need to 
+innovate and improve the design our tools.
 
 __What can we do about it ?__ If you're a PostgreSQL company, please hire UI/UX
 experts and make them work with the various existing projects. If you're a
@@ -165,14 +168,14 @@ while but hopefully we'll get there.
 Now What ? 
 -------------------------------------------------------------------------------
 
-This first meeting left me with lots of questions [FIXME] but also hopes that 
-we will see big improvements in this area and the forthcoming years.
+This first meeting left me with many questions but also with great hopes. I am 
+pretty sure we will see big improvements in this area in the forthcoming years.
 
-In fact, PostgreSQL is now so feature-rich (FIXME) that we've now reached a 
-point where the new challenges are outside the database core. Improving our 
-Graphic tools is one of these and if we can gather only 10% of the community 
-collective intelligence (FIXME) on this matter, we're going to make great 
-things. 
+In fact, PostgreSQL is now so feature rich that we've now reached a point where 
+the new challenges are outside the database core itslef. Improving our 
+Graphic tools is one of these future challenges and if we can gather only 10% 
+of the community's collective intelligence on this matter, we're going to make 
+great things !
 
 
 
