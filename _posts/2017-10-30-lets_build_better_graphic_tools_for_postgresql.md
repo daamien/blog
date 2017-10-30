@@ -1,14 +1,13 @@
 ---
+title: "Lets build better graphic tools for PostgreSQL" 
 date: 2017-10-30 08:17:36
 layout: post
-title: "Lets build better graphic tools for PostgreSQL" 
 description: "A quick report from the PostgreSQL Graphical Tools Developers Meeting"
 author: damien clochard
 twitter_id: @daamien
 github_id: daamien
 category: english
-tags: [PostgreSQL, GUI ]
-
+tags: [PostgreSQL, GUI]
 ---
 
 The very first [PostgreSQL Graphic Tools Developer
