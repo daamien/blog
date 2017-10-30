@@ -50,7 +50,7 @@ Here's my personal report from the meeting, you can also find a more general sum
 
 <!--MORE-->
 
-[![PostgreSQL Graphic Tools Developer Meeting](/_images/pgtdm.jpg)](https://wiki.postgresql.org/wiki/PostgreSQL_Graphic_Tools_Developper_Meeting_2017)
+[![PostgreSQL Graphic Tools Developer Meeting](https://raw.githubusercontent.com/daamien/blog/gh-pages/_images/pgtdm.jpg)](https://wiki.postgresql.org/wiki/PostgreSQL_Graphic_Tools_Developper_Meeting_2017)
 
 PostgreSQL is the best open source database ever and its community is packed
 with brilliant people. But there's always room for improvements and the graphic
@@ -163,7 +163,7 @@ There's no magic formula for that, and this culture shift will probably take a
 while but hopefully we'll get there.
 
 
-[![PostgreSQL Graphic Tools Developer Meeting](/_images/pgtdm_group_photo_2017.jpg)](https://wiki.postgresql.org/wiki/PostgreSQL_Graphic_Tools_Developper_Meeting_2017)
+[![PostgreSQL Graphic Tools Developer Meeting](https://raw.githubusercontent.com/daamien/blog/gh-pages/_images/pgtdm_group_photo_2017.jpg)](https://wiki.postgresql.org/wiki/PostgreSQL_Graphic_Tools_Developper_Meeting_2017)
 
 Now What ? 
 -------------------------------------------------------------------------------
