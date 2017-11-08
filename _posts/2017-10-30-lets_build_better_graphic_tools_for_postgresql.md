@@ -1,13 +1,10 @@
 ---
-title: "Lets build better graphic tools for PostgreSQL" 
-date: 2017-10-30 08:17:36
+date:  2017-10-30 08:17:36
 layout: post
+title: "Let's build better graphic tools for PostgreSQL"
 description: "A quick report from the PostgreSQL Graphical Tools Developers Meeting"
-author: damien clochard
-twitter_id: @daamien
-github_id: daamien
 category: english
-tags: [PostgreSQL, GUI]
+tags: [PostgreSQL, GUI, management]
 ---
 
 The very first [PostgreSQL Graphic Tools Developer
@@ -115,7 +112,7 @@ the GUI developpers I know are primarily DBAs. Very often, they created their
 software for their own need and they're doing their best to build a nice 
 interface. But we're in competition against some big companies (Oracle, 
 Microsoft and others) and they investing a lot in this area. Instread of tyring
-to copycat compititing like `Oracle Cloud Control` or `PhpMyAdmin`, we need to 
+to copycat competiting like `Oracle Cloud Control` or `PhpMyAdmin`, we need to 
 innovate and improve the design our tools.
 
 __What can we do about it ?__ If you're a PostgreSQL company, please hire UI/UX
