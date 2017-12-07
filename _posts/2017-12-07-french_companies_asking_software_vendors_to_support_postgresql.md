@@ -25,7 +25,7 @@ dedidacted
 task force inside the [PostgreSQLFr non-profit association](https://www.postgresql.fr/asso/). Over the last months,
 it has grown remarkably. 
 
-![PostgreSQL Cross-Enterprise Work Group](https://raw.githubusercontent.com/daamien/blog/gh-pages/_images/pgtie_affiche_en.png)
+![PostgreSQL Cross-Enterprise Work Group](https://raw.githubusercontent.com/daamien/blog/gh-pages/_images/pggtie_affiche_en.png)
 
 In a new press release (link below) published yesterday, the workgroup sent an
 open letter to software vendors, asking them officially to support PostgreSQL.
