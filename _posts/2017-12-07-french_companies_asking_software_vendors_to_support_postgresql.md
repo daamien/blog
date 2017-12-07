@@ -61,11 +61,11 @@ PeopleDoc, SNCF,
 Société Générale (bank)
 and Tokheim Services Group.
 
-These institutions gathered in the PostgreSQLFr association to share their 
-experience, promote PostgreSQL and contribute to its development. 
- Beyond these 3 big missions, the remarkable point is that the group 
-organized itself by adopting the great principles of the PostgreSQL community
-: openess, mutual help, transparency, self-organization, etc.
+These institutions gathered in the PostgreSQLFr association to share their experience, 
+promote PostgreSQL and contribute to its development.  Beyond these 3 big missions, 
+the remarkable point is that the group  organized itself by adopting the great 
+principles of the PostgreSQL community: openess, mutual help, transparency, 
+self-organization, etc.
 
 To discover the activities of the group, you can come to the booth of the
 PostgreSQL community during the Paris Open Summit 2017
