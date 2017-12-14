@@ -35,7 +35,8 @@ open letter to software vendors, asking them officially to support PostgreSQL.
 <https://www.postgresql.fr/entreprises/20171206_lettre_ouverte_aux_editeurs_de_logiciels>
 
 * English translation : 
-<https://www.postgresql.fr/entreprises/english>
+<https://www.postgresql.fr/entreprises/20171206_open_letter_to_software_vendors>
+
 
 This is a major step for PostgreSQL in France and in the french-speaking 
 countries. For the first time, more than 20 national and international 
@@ -72,7 +73,7 @@ PostgreSQL community during the Paris Open Summit 2017
 or read the wiki page of the workgroup :
 
 * Original version: <https://www.postgresql.fr/entreprises/> 
-* English translation: <https://www.postgresql.fr/entreprises/welcome>
+* English translation: <https://www.postgresql.fr/entreprises/english>
 
 The enterprise workgroup is the very illustration of a fundamental principle
 of open source: erasing the separation between software publishers and 
