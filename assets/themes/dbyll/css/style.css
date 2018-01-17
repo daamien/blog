@@ -2,6 +2,7 @@
 
 body{
   color: #2c3e50;
+  font-size: 14px;
 }
 
 .sidebar {
@@ -38,7 +39,7 @@ a.nav-link:hover { color: #777 }
 
 #bio {
   font-family: "Courier New", Courier, monospace;
-  font-size: 13px;
+  font-size: 14px;
   margin: 0 auto;
   margin-bottom: 10px;
 }
