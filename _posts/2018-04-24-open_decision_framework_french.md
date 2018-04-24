@@ -48,7 +48,7 @@ uniquement I've been so impressed au code informatique.
 Si vous voulez en savoir plus, voici une version courte de ma présentation 
 enregistrée à l'occasion du [FOSDEM] en février: 
 
-<video controls="controls" with='600px' width='350px'
+<video controls="controls" width='800px'
 poster="https://raw.githubusercontent.com/daamien/blog/gh-pages/_images/fosdem_odf_poster2.png"
 >
   <source src="https://video.fosdem.org/2018/K.4.201/osd_the_open_decision_framework.webm" type='video/webm; codecs="vp9, opus"' />
