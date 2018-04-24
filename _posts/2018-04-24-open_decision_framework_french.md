@@ -7,11 +7,7 @@ category: french
 tags: [Open Source,open, decision, framework,organization]
 ---
 
-[Open Decision Framework]: https://github.com/red-hat-people-team/open-decision-framework
-[Cadre de Décision Ouverte]: https://github.com/red-hat-people-team/open-decision-framework/blob/master/fr_FR/ODF-community.md
-[TEQNation]: https://teqnation.nl
-[FOSDEM]: https://fosdem.org
-[Red Hat]: https://redhat.com/
+
 
 Demain je serai en Hollande pour présenter le [Cadre de Décision Ouverte] 
 ( [Open Decision Framework] en VO ) à l'occasion de la conférence [TEQNation] 
@@ -19,6 +15,12 @@ et j'essaierai d'expliquer comment on peut utiliser les principes fondamentaux
 de l'open source pour prendre de meilleurs décisions. 
 
 <!--MORE-->
+
+[Open Decision Framework]: https://github.com/red-hat-people-team/open-decision-framework
+[Cadre de Décision Ouverte]: https://github.com/red-hat-people-team/open-decision-framework/blob/master/fr_FR/ODF-community.md
+[TEQNation]: https://teqnation.nl
+[FOSDEM]: https://fosdem.org
+[Red Hat]: https://redhat.com/
 
 Le mouvement des logiciels libres est puissant et créatif, avec de nombreux 
 modèles de gourvernance et beaucoup de diversité. Mais tous les projets open 
