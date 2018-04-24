@@ -4,7 +4,7 @@ layout: post
 title: The Open Decision Framework
 description: "Making decisions using open source principles"
 category: english
-tags: [Open Source]
+tags: [Open Source,open, decision, framework,organization]
 ---
 
 [Open Decision Framework]: https://github.com/red-hat-people-team/open-decision-framework
@@ -38,7 +38,8 @@ open source principles can apply beyond writing code.
 If you want to learn more about it here's a shorter version of my talk recorded during [FOSDEM] in February : 
 
 <video controls="controls" 
-poster="https://fosdem.org/2018/schedule/event/osd_the_open_decision_framework/osd_the_open_decision_framework-5f9bcfed11167e315e11f41ba8b1dda2c87f5d9abbb838ebb72bf0b3c032596c.png">
+poster="https://raw.githubusercontent.com/daamien/blog/gh-pages/_images/fosdem_odf_poster2.png"
+>
   <source src="https://video.fosdem.org/2018/K.4.201/osd_the_open_decision_framework.webm" type='video/webm; codecs="vp9, opus"' />
   
 </video>
