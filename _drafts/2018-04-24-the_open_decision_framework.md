@@ -7,14 +7,16 @@ category: english
 tags: [Open Source,open, decision, framework,organization]
 ---
 
-[Open Decision Framework]: https://github.com/red-hat-people-team/open-decision-framework
-[TEQNation conference]: https://teqnation.nl
-[FOSDEM]: https://fosdem.org
-[Red Hat]: https://redhat.com/
 
 Tomorrow I'll talk about the [Open Decision Framework] at the [TEQNation conference] in The Netherlands and I'll try to explain how we can use open source principles to take better decisions.
 
 <!--MORE-->
+
+
+[Open Decision Framework]: https://github.com/red-hat-people-team/open-decision-framework
+[TEQNation conference]: https://teqnation.nl
+[FOSDEM]: https://fosdem.org
+[Red Hat]: https://redhat.com/
 
 Free Software is a powerful movement with many different types of 
 governance models and a lot of diversity. But all the successful open source 
