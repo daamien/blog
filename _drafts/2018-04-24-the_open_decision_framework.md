@@ -4,7 +4,7 @@ layout: post
 title: The Open Decision Framework
 description: "Making decisions using open source principles"
 category: english
-tags: [Open Source]
+tags: [Open Source, framework, organization, decision, open]
 ---
 
 [Open Decision Framework]: https://github.com/red-hat-people-team/open-decision-framework
