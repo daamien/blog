@@ -9,10 +9,11 @@ tags: [SCOP]
 
 Je viens de boucler la semaine dernière un cycle amorcé il y a une douzaine 
 d'années quand j'ai pris la direction de la société coopérative 
-[Dalibo](https://www.dalibo.com)  avec Jean-Paul Argudo. Ce voyage m'a conduit 
+[Dalibo](https://www.dalibo.com) avec Jean-Paul Argudo. Ce voyage m'a conduit 
 beaucoup plus loin que je ne l'aurai imaginé et il m'a appris énormément sur 
 moi-même et sur la gouvernance 
-d'entreprise en particulier.
+d'entreprise en particulier. Je reste au sein de la société et je retourne à 
+mon métier premier et ma passion : DBA PostgreSQL !
 
 <!--MORE-->
 
