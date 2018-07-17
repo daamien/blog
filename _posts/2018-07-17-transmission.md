@@ -1,5 +1,5 @@
 ---
-date: 2018-07-09 08:17:36
+date: 2018-07-17 08:17:36
 layout: post
 title: Transmission
 description: ""
@@ -55,7 +55,8 @@ temps, mais il y a toujours eu du respect et de l'écoute. C'est ce qui me
 manquera le plus. Je ne suis pas certain de vivre à nouveau un duo 
 aussi puissant...
 
-Je transmet le flambeau à  Virginie Jourdan et je lui souhaite de vivre une 
+[Je transmet le flambeau à  Virginie Jourdan](http://blog.dalibo.com/2018/07/17/virginie_jourdan_gerance.html) 
+et je lui souhaite de vivre une 
 expérience similaire. Je lui donne toute ma confiance pour prendre ma place 
 en y injectant sa personnalité et ses différences. Elle a toute la 
 légitimité et le charisme nécessaire pour co-piloter ce navire un peu fou.
