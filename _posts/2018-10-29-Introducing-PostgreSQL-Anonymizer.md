@@ -19,7 +19,7 @@ The project is open source and available here :
 
 <!--MORE-->
 
-![PostgreSQL Anonymizer](https://github.com/daamien/blog/blob/gh-pages/assets/img/postgresql_anonymizer.banner.gif)
+![PostgreSQL Anonymizer](https://raw.githubusercontent.com/daamien/blog/gh-pages/assets/img/postgresql_anonymizer.banner.gif)
 
 I strongly believe in  a **declarative approach** of anonymization : the location
 of sensitive information inside database and the rules to hide this information
