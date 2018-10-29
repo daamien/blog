@@ -15,6 +15,8 @@ The project is open source and available here :
 
 <https://gitlab.com/daamien/postgresql_anonymizer>
 
+[PostgreSQL Anonymizer]: https://gitlab.com/daamien/postgresql_anonymizer
+
 <!--MORE-->
 
 ![PostgreSQL Anonymizer](https://github.com/daamien/blog/blob/gh-pages/assets/img/postgresql_anonymizer.banner.gif)
@@ -22,7 +24,7 @@ The project is open source and available here :
 I strongly believe in  a **declarative approach** of anonymization : the location
 of sensitive information inside database and the rules to hide this information
 should be declared directly using the Data Definition Language (DDL).
-In the age of [GDPR], developpers should specify an anonymization strategy
+In the age of GDPR, developpers should specify an anonymization strategy
 inside the table definitions, just like they specify data types, foreign
 keys and constraints.
 
