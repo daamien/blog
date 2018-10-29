@@ -51,21 +51,21 @@ Imagine a `people` table
  T800 | Schwarzenegger | 0609110911
 ```
 
-1. Activate the masking engine
+Step 1. Activate the masking engine
 
 ```sql
 =# CREATE EXTENSION IF NOT EXISTS anon CASCADE;
 =# SELECT anon.mask_init();
 ```
 
-2. Declare a masked user
+Step 2. Declare a masked user
 
 ```sql
 =# CREATE ROLE skynet;
 =# COMMENT ON ROLE skynet IS 'MASKED';
 ```
 
-3. Declare the masking rules
+Step 3. Declare the masking rules
 
 ```sql
 =# COMMENT ON COLUMN people.name IS 'MASKED WITH FUNCTION anon.random_last_name()';
@@ -73,7 +73,7 @@ Imagine a `people` table
 =# COMMENT ON COLUMN people.phone IS 'MASKED WITH FUNCTION anon.partial(phone,2,$$******$$,2)';
 ```
 
-4. Connect with the masked user
+Step 4. Connect with the masked user
 
 ```sql
 =# \! psql test -U skynet -c 'SELECT * FROM people;'
