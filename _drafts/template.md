@@ -1,9 +1,9 @@
 ---
-date: 2017-10-27 08:17:36
+date: 2019-01-03 08:17:36
 layout: post
-title: Titre de l'article 
+title: "8 Anonymization Strategies with PostgreSQL"
 description: ""
-category: french
+category: english
 tags: [PostgreSQL]
 ---
 
