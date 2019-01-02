@@ -1,22 +1,34 @@
 ---
 date: 2017-10-27 08:17:36
 layout: post
-title: Titre de l'article
+title: "8 Anonymization Strategies with PostgreSQL"
 description: ""
 category: french
 tags: [PostgreSQL, data, anonymization, privacy]
 ---
 
-
+Data Anonymization is a complex topic but PostgreSQL has a lot of interesting
+feature to tackle this challenge ! Here's an overview of different approach and
+how to implement them directly within a PostgreSQL database.
 
 <!--MORE-->
+
+Over the last few month I've been working on a project called 
+[PostgreSQL Anonymizer] and it led me to try various techniques to remove 
+personal data for different purposes : development, CI, functionnal testing, 
+Analytics, etc.
+
+[PostgreSQL Anonymizer]: https://gitlab.com/dalibo/postgresql_anonymizer
+[Introducing PostgreSQL Anomyizer]: http://blog.taadeem.net/english/2018/10/29/Introducing-PostgreSQL-Anonymizer
+
+All the examples in the article will use a simplified table (see below) and 
+should work with all current versions of PostgreSQL ( from 9.4 to 11 ).
 
 ```SQL
 CREATE TABLE people (
     id SERIAL,
     name TEXT NOT NULL,
     address TEXT,
-    biography TEXT,
     age INTEGER,
     salary INTEGER,
     phone TEXT
@@ -51,7 +63,7 @@ constant value ("Static Substitution").
 Example :
 
 ```SQL
-UPDATE people SET biography = '<CONFIDENTIAL>';
+UPDATE people SET name = '<CONFIDENTIAL>';
 UPDATE people SET address = NULL;
 ```
 
@@ -112,21 +124,37 @@ and it's easy to deduce that the person is the CEO of the company.
 
 ## 4. Encryption
 
-uses an encryption algorithm and requires a private key.
+Anomization and Encryption are often associated when people talk about data
+privacy. But each process has its own purpose. Tha main difference being that
+Encryption is a two-way process ( some user should be able decrypt or re-hash 
+the data), while Anonymization is a definitive alteration of the dataset. 
+
+However it is possible to use encryption function as a destructive method just
+by immediatly destroying the encryption key. PostgreSQL offers a wide range of
+encryption functions packed in an extension called [pgcrypto].
+
+
+[pgcrypto]: https://www.postgresql.org/docs/current/pgcrypto.html
+
+For example, a simple and definitve way is to alter data is to 
+generate a new random "salt" for each call a the `crypt` function:
 
 ```SQL
-UPDATE people SET name = FIXME
+CREATE EXTENSION pgcrypto;
+
+UPDATE people 
+SET name = SELECT crypt('name', gen_salt('md5'));
 ```
 
-FIXME
+In my view, this is usefull for very specific situations: mostly 
+TEXT attributes with an UNIQUE constraint, or when you need the transformation
+process to be `IMMUTABLE` (but then if the salt or encryption key is stolen, 
+authentic data can be revealed.)
 
-Pros :
-   * Respect the `UNIQUE` constraint
-   * The transformation is `IMMUTABLE`
-
-Cons :
-   * Functionnal testing is weird
-   * If the encryption key is stolen, authentic data can be revealed.
+Anyway, this strategy is a good fit for analytics but for functionnal testing 
+or development, because in the long run, it's hard to work with values like 
+"DN29BHSY$CVju1" and "S7ckeXJAVYZfM3SF1" :-)
+ 
 
 ---
 
@@ -186,6 +214,7 @@ some effort to produce releveant synthetic data.
 Furthermore this technique is not appropriate for analytics because the values
 are not "real". On the other hand, it's perfect for CI and functionnal testing.
 
+[faker]: https://github.com/joke2k/faker
 
 ---
 
@@ -250,23 +279,34 @@ years old in the table, he/she will be easily recognized.
 
 # Finding the right strategy
 
-In a nutshell, anonymization is a complex topic and it takes time to produce an 
-anonymized dataset that would at the same time usefull and with a low risk of 
+In a nutshell, anonymization is a complex topic and it takes time to produce an
+anonymized dataset that would at the same time usefull and with a low risk of
 reidentification.
 
-For the same dataset, you migth need to use different strategies depending on 
+For the same dataset, you migth need to use different strategies depending on
 the final destination of the data.
 
 Here's a quick recap :
 
 | Strategy            | Data Types       | When to use                        |
-| Supression          | All              | useless attributes                 |
-| Random Substitution | All              | Useless attributes with integrity constraints |
+|---------------------|------------------|------------------------------------|
+| Supression          | All              | Useless attributes                 |
+| Random Substitution | All   | Useless attributes with integrity constraints |
 | Variance            | Numeric / Dates  |  Analytics |
-| Encryption          | Text             |  UNIQUE attributes |
+| Encryption          | Text             | Analytics / UNIQUE attributes |
 | Shuffling           | All              | Analytics              |
-| Faking / Mocking    | All              | CI / Functionnal Testing
+| Faking / Mocking    | All              | Dev / CI / Functionnal Testing  |
 | Partial Suppression | Text             | Direct Identifiers |
-| Generalization      | Numeric / Dates  |  Analytics |
+| Generalization      | Numeric / Dates  | Analytics |
 
-FIXLME PostgreSQL Anonymizer
+What we're trying to do with [PostgreSQL Anonymizer] project is to provide 
+tools to help developpers implement those techniques, especially shuffling, 
+variance, faking and dynamic masking. The goal is to extend the DDL syntax 
+and define the masking policy directly inside the table declaration. The projet
+is at an early stage of  development, we really looking for feedback and ideas 
+on how to proceed.
+
+If you're interected, check out the code here : 
+<https://gitlab.com/dalibo/postgresql_anonymizer>
+
+ 
