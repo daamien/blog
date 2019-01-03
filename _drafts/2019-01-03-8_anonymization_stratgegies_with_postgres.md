@@ -8,21 +8,21 @@ tags: [PostgreSQL, data, anonymization, privacy]
 ---
 
 Data Anonymization is a complex topic but PostgreSQL has a lot of interesting
-feature to tackle this challenge ! Here's an overview of different approach and
+features to tackle this challenge! Here is an overview of different approach and
 how to implement them directly within a PostgreSQL database.
 
 <!--MORE-->
 
-Over the last few month I've been working on a project called 
-[PostgreSQL Anonymizer] and it led me to try various techniques to remove 
-personal data for different purposes : development, CI, functionnal testing, 
+Over the last few month I have been working on a project called
+[PostgreSQL Anonymizer]. It led me to try various techniques to remove
+personal data for different purposes: development, CI, functional testing,
 Analytics, etc.
 
 [PostgreSQL Anonymizer]: https://gitlab.com/dalibo/postgresql_anonymizer
-[Introducing PostgreSQL Anomyizer]: http://blog.taadeem.net/english/2018/10/29/Introducing-PostgreSQL-Anonymizer
+[Introducing PostgreSQL Anonymizer]: http://blog.taadeem.net/english/2018/10/29/Introducing-PostgreSQL-Anonymizer
 
-All the examples in the article will use a simplified table (see below) and 
-should work with all current versions of PostgreSQL ( from 9.4 to 11 ).
+All the examples in the article will use a simplified table (see below) and
+should work with all current versions of PostgreSQL (from 9.4 to 11).
 
 ```SQL
 CREATE TABLE people (
@@ -38,9 +38,9 @@ CREATE TABLE people (
 
 ## 0. Sampling
 
-Sampling is not Anonymization ! But when you're looking to remove personal data
+Sampling is not Anonymization! But when you're looking to remove personal data
 from a database, most of the time you don't need to publish all the rows.
-So before going any further it's important to note that PostgreSQL provides
+So before going any further it is important to note that PostgreSQL provides
 a feature called `TABLESAMPLE` that will reduce the size of your dataset.
 
 For example, if you want to work only on 20% of a table:
@@ -56,7 +56,7 @@ friend.
 
 ## 1. Suppression
 
-This is most obvious way to get rid of personal identifiers : just wipe
+This is the most obvious way to get rid of personal identifiers: just wipe
 a column by replacing all values with `NULL` (aka "Nullification") or with a
 constant value ("Static Substitution").
 
@@ -69,8 +69,8 @@ UPDATE people SET address = NULL;
 
 This is simple and fast. For certain data fields, it may be the best option.
 
-But of course it will break integrity constraints ( `PRIMARY, ``UNIQUE`,
-`NOT NULL`, etc.).  And of course the column will be useless for functional
+But of course it will break integrity constraints (`PRIMARY, ``UNIQUE`,
+`NOT NULL`, etc.).  And moreover, the column will be useless for functional
 testing.
 
 
@@ -79,9 +79,9 @@ testing.
 
 ## 2. Random Substitution
 
-This time we're replacing personal data with purely random values.
+This time we are replacing personal data with purely random values.
 
-Example :
+Example:
 
 ```SQL
 UPDATE people SET name = md5(random()::text);
@@ -89,7 +89,7 @@ UPDATE people SET salary= 100000*random();
 ```
 
 Again this is simple and it does not break `NOT NULL` constraints.
-But this is still useless for functionnal testing and for analytics...
+But this is still useless for functional testing and for analytics...
 
 
 ---
@@ -106,17 +106,17 @@ UPDATE people
 SET salary= salary *  (1+ (2 * random() - 1 ) * 0.25) ;
 ```
 
-This is great for indirect indentifiers : dates and numeric values that should
-remain meaningful without revealing identity. Aggregations suche as
+This is great for indirect identifiers: dates and numeric values that should
+remain meaningful without revealing identity. Aggregations such as
 `average` and `count` will be similar to the original
 
-Of course, it's important to adapt the degree of perturbation depending on
-the distribution of the values of the attribute and the size of the dataset.
+Of course, it is important to adapt the degree of perturbation depending on
+the distribution of the values, of the attribute and the size of the dataset.
 
-However even with a strong pertubation, reidenfication is possible when the
+However even with a strong perturbation, reidentification is possible when the
 dataset contain extreme data. In the previous example, if an employee earns 100
 times the average wage, adding noise will not hide that such a big difference
-and it's easy to deduce that the person is the CEO of the company.
+and it is easy to deduce that the person is the CEO of the company.
 
 
 ---
@@ -124,37 +124,37 @@ and it's easy to deduce that the person is the CEO of the company.
 
 ## 4. Encryption
 
-Anomization and Encryption are often associated when people talk about data
-privacy. But each process has its own purpose. Tha main difference being that
-Encryption is a two-way process ( some user should be able decrypt or re-hash 
-the data), while Anonymization is a definitive alteration of the dataset. 
+Anonymization and Encryption are often associated when people talk about data
+privacy. But each process has its own purpose. The main difference being that
+Encryption is a two-way process (some user should be able decrypt or re-hash
+the data), while Anonymization is a definitive alteration of the dataset.
 
-However it is possible to use encryption function as a destructive method just
-by immediatly destroying the encryption key. PostgreSQL offers a wide range of
+It is possible to use encryption function as a destructive method just
+by immediately destroying the encryption key. PostgreSQL offers a wide range of
 encryption functions packed in an extension called [pgcrypto].
 
 
 [pgcrypto]: https://www.postgresql.org/docs/current/pgcrypto.html
 
-For example, a simple and definitve way is to alter data is to 
+For example, a simple and definitive way is to alter data is to
 generate a new random "salt" for each call a the `crypt` function:
 
 ```SQL
 CREATE EXTENSION pgcrypto;
 
-UPDATE people 
+UPDATE people
 SET name = SELECT crypt('name', gen_salt('md5'));
 ```
 
-In my view, this is usefull for very specific situations: mostly 
+In my view, this is useful for very specific situations: mostly
 TEXT attributes with an UNIQUE constraint, or when you need the transformation
-process to be `IMMUTABLE` (but then if the salt or encryption key is stolen, 
-authentic data can be revealed.)
+process to be `IMMUTABLE` (but then if the salt or encryption key is stolen,
+authentic data can be revealed).
 
-Anyway, this strategy is a good fit for analytics but for functionnal testing 
-or development, because in the long run, it's hard to work with values like 
+Anyway, this strategy is a good fit for analytics. Not for functional testing
+or development, because in the long run, it is hard to work with values like
 "DN29BHSY$CVju1" and "S7ckeXJAVYZfM3SF1" :-)
- 
+
 
 ---
 
@@ -187,7 +187,7 @@ This is less destructive approach, because we keep real values in the dataset:
 aggregates (`sum`, `average`) are correct. This is also the best strategy if
 the column is referenced by a foreign key.
 
-However the shuffling function is a bit complex to write and it's not really
+However the shuffling function is a bit complex to write and it is not really
 effective on data with low standard deviation or very few distinct values
 (such as `boolean`).
 
@@ -208,11 +208,11 @@ SET address = fake_address();
 ```
 
 The difficulty, of course, is to write the faking function. For dates or
-numeric values, it's basic. But for more complex data types, it may require
-some effort to produce releveant synthetic data.
+numeric values, it is basic. But for more complex data types, it may require
+some effort to produce relevant synthetic data.
 
 Furthermore this technique is not appropriate for analytics because the values
-are not "real". On the other hand, it's perfect for CI and functionnal testing.
+are not "real". On the other hand, it is perfect for CI and functional testing.
 
 [faker]: https://github.com/joke2k/faker
 
@@ -236,10 +236,10 @@ Partial Suppression is similar to Static Substitution. But it has an
 interesting property: the data subjects can still recognize his/her own data
 while other users can't...
 
-Another advantage is that this transformation is `IMMUTABLE` : the same
+Another advantage is that this transformation is `IMMUTABLE`: the same
 input values will always produce the output.
 
-This technique is perfect for direct indentifiers : Credit Card, Phone, E-mail,
+This technique is perfect for direct identifiers: Credit Card, Phone, E-mail,
 etc.
 
 However it works only with `TEXT` / `VARCHAR` types.
@@ -266,11 +266,11 @@ AS  SELECT
 ```
 
 The main drawback here is the change of data type. The `age` is now a range of
-numeric values. Obviously this will break CI, functionnal tests and any use
+numeric values. Obviously this will break CI, functional tests and any use
 related to the application. But this approach is fine for data analytics and
 aggregation.
 
-We also face the same issue as the `variance` strategy : if the data set has
+We also face the same issue as the `variance` strategy: if the data set has
 'extreme values' and the generalization is too soft, there's a risk of
 re-identification. With the example above, if there's only 1 person under 20
 years old in the table, he/she will be easily recognized.
@@ -280,33 +280,31 @@ years old in the table, he/she will be easily recognized.
 # Finding the right strategy
 
 In a nutshell, anonymization is a complex topic and it takes time to produce an
-anonymized dataset that would at the same time usefull and with a low risk of
+anonymized dataset that would at the same time useful and with a low risk of
 reidentification.
 
-For the same dataset, you migth need to use different strategies depending on
+For the same dataset, you might need to use different strategies depending on
 the final destination of the data.
 
 Here's a quick recap :
 
 | Strategy            | Data Types       | When to use                        |
 |---------------------|------------------|------------------------------------|
-| Supression          | All              | Useless attributes                 |
+| Suppression          | All              | Useless attributes                 |
 | Random Substitution | All   | Useless attributes with integrity constraints |
 | Variance            | Numeric / Dates  |  Analytics |
 | Encryption          | Text             | Analytics / UNIQUE attributes |
 | Shuffling           | All              | Analytics              |
-| Faking / Mocking    | All              | Dev / CI / Functionnal Testing  |
+| Faking / Mocking    | All              | Dev / CI / Functional Testing  |
 | Partial Suppression | Text             | Direct Identifiers |
 | Generalization      | Numeric / Dates  | Analytics |
 
-What we're trying to do with [PostgreSQL Anonymizer] project is to provide 
-tools to help developpers implement those techniques, especially shuffling, 
-variance, faking and dynamic masking. The goal is to extend the DDL syntax 
-and define the masking policy directly inside the table declaration. The projet
-is at an early stage of  development, we really looking for feedback and ideas 
-on how to proceed.
+What we are trying to do with [PostgreSQL Anonymizer] project is to provide
+tools to help developers implement those techniques. We will work mainly on
+shuffling, variance, faking and dynamic masking. The goal is to extend the DDL
+syntax and define the masking policy directly inside the table declaration. The
+project is at an early stage of development. We are really looking for feedback
+and ideas on how to proceed.
 
-If you're interected, check out the code here : 
+If you are interested, check out the code here :
 <https://gitlab.com/dalibo/postgresql_anonymizer>
-
- 
