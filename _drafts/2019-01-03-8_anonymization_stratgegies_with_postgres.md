@@ -26,9 +26,9 @@ Analytics, etc.
 [PostgreSQL Anonymizer]: https://gitlab.com/dalibo/postgresql_anonymizer
 [Introducing PostgreSQL Anonymizer]: http://blog.taadeem.net/english/2018/10/29/Introducing-PostgreSQL-Anonymizer
 
-So far, I have found 8 different ways to anonymize a dataset. Here's a quick 
-tour with practical examples. All the queries in the article will use a 
-simplified table (see below) and should work with any current version of 
+So far, I have found 8 different ways to anonymize a dataset. Here's a quick
+tour with practical examples. All the queries in the article will use a
+simplified table (see below) and should work with any current version of
 PostgreSQL (from 9.4 to 11).
 
 ```SQL
@@ -47,7 +47,7 @@ CREATE TABLE people (
 
 _Sampling is not Anonymization!_ But when you need to remove personal data
 from a database, most of the time you don't need to publish all the rows.
-The anonymization process will be faster and you will limit the risk of 
+The anonymization process will be faster and you will limit the risk of
 unintended disclosure.
 
 So before going any further it is important to note that PostgreSQL provides
@@ -78,7 +78,7 @@ UPDATE people SET name = '<CONFIDENTIAL>';
 UPDATE people SET address = NULL;
 ```
 
-This is simple and effective. For useless or highly sensitive data fields, 
+This is simple and effective. For useless or highly sensitive data fields,
 it may be the best option.
 
 But of course it will break integrity constraints (`PRIMARY, ``UNIQUE`,
@@ -128,7 +128,7 @@ the distribution of the values, of the attribute and the size of the dataset.
 However even with a strong perturbation, reidentification is possible when the
 dataset contain extreme values. In the previous example, if someone earns 100
 times the average wage, adding noise will not hide the identity of this highly
-paid employee.  With such a big difference, it is easy to deduce that the 
+paid employee.  With such a big difference, it is easy to deduce that the
 person is the CEO of the company.
 
 
@@ -207,7 +207,7 @@ effective on data with low standard deviation or very few distinct values
 ---
 
 
-# 6. Faking / Mocking
+## 6. Faking / Mocking
 
 Another idea is to replace sensitive data with **random-but-plausible**
 values, also know as `synthetic data`.
@@ -222,7 +222,7 @@ SET address = fake_address();
 
 The difficulty, of course, is to write the faking function. For dates or
 numeric values, it is basic. But for more complex data types, it may require
-some effort to produce relevant synthetic data. Various open source tools can 
+some effort to produce relevant synthetic data. Various open source tools can
 help you with that, personnally I like [faker] a lot.
 
 Furthermore this technique is not appropriate for analytics because the values
@@ -233,7 +233,7 @@ are not "real". On the other hand, it is perfect for CI and functional testing.
 ---
 
 
-# 7. Partial Suppression
+## 7. Partial Suppression
 
 In certain cases, you might want to hide just some parts of the data and leave
 other parts visible.
@@ -291,7 +291,7 @@ years old in the table, he/she will be easily recognized.
 
 ---
 
-# Finding the right strategy
+## Finding the right strategy
 
 In a nutshell, anonymization is a complex topic and it takes time to produce an
 anonymized dataset that would at the same time useful and with a low risk of
@@ -322,3 +322,12 @@ and ideas on how to proceed.
 
 If you are interested, check out the code here :
 <https://gitlab.com/dalibo/postgresql_anonymizer>
+
+
+<br/>
+<br/>
+<br/>
+ 
+
+__Credits__ : [madtibo](https://github.com/madtibo) for the help and ideas and 
+[Aftab Uzzaman](https://www.flickr.com/photos/aftab/5666449222) for the photo.
