@@ -1,8 +1,8 @@
 ---
-date: 2017-10-27 08:17:36
+date: 2019-01-03 23:17:36
 layout: post
 title: "8 Anonymization Strategies with PostgreSQL"
-description: ""
+description: "A tour a various techniques to remove Personally Identifiable Informations (PII) from a Postgres database"
 category: french
 tags: [PostgreSQL, data, anonymization, privacy]
 ---
@@ -13,16 +13,23 @@ how to implement them directly within a PostgreSQL database.
 
 <!--MORE-->
 
-Over the last few month I have been working on a project called
+![](https://github.com/daamien/blog/raw/gh-pages/_images/hiding_elephant.jpg)
+
+Over the last few months I have been working on a project called
 [PostgreSQL Anonymizer]. It led me to try various techniques to remove
 personal data for different purposes: development, CI, functional testing,
 Analytics, etc.
 
+> See my previous article "[Introducing PostgreSQL Anonymizer]" for more details
+> about that project...
+
 [PostgreSQL Anonymizer]: https://gitlab.com/dalibo/postgresql_anonymizer
 [Introducing PostgreSQL Anonymizer]: http://blog.taadeem.net/english/2018/10/29/Introducing-PostgreSQL-Anonymizer
 
-All the examples in the article will use a simplified table (see below) and
-should work with all current versions of PostgreSQL (from 9.4 to 11).
+So far, I have found 8 different ways to anonymize a dataset. Here's a quick 
+tour with practical examples. All the queries in the article will use a 
+simplified table (see below) and should work with any current version of 
+PostgreSQL (from 9.4 to 11).
 
 ```SQL
 CREATE TABLE people (
@@ -38,8 +45,11 @@ CREATE TABLE people (
 
 ## 0. Sampling
 
-Sampling is not Anonymization! But when you're looking to remove personal data
+_Sampling is not Anonymization!_ But when you need to remove personal data
 from a database, most of the time you don't need to publish all the rows.
+The anonymization process will be faster and you will limit the risk of 
+unintended disclosure.
+
 So before going any further it is important to note that PostgreSQL provides
 a feature called `TABLESAMPLE` that will reduce the size of your dataset.
 
@@ -51,8 +61,9 @@ SELECT * FROM people TABLESAMPLE BERNOULLI(20);
 
 And if you want to extract a subset among several tables while maintaining
 referential integrity, [pg_sample](https://github.com/mla/pg_sample) is your
-friend.
+friend !
 
+---
 
 ## 1. Suppression
 
@@ -67,7 +78,8 @@ UPDATE people SET name = '<CONFIDENTIAL>';
 UPDATE people SET address = NULL;
 ```
 
-This is simple and fast. For certain data fields, it may be the best option.
+This is simple and effective. For useless or highly sensitive data fields, 
+it may be the best option.
 
 But of course it will break integrity constraints (`PRIMARY, ``UNIQUE`,
 `NOT NULL`, etc.).  And moreover, the column will be useless for functional
@@ -108,15 +120,16 @@ SET salary= salary *  (1+ (2 * random() - 1 ) * 0.25) ;
 
 This is great for indirect identifiers: dates and numeric values that should
 remain meaningful without revealing identity. Aggregations such as
-`average` and `count` will be similar to the original
+`average` and `count` will be similar to the original.
 
 Of course, it is important to adapt the degree of perturbation depending on
 the distribution of the values, of the attribute and the size of the dataset.
 
 However even with a strong perturbation, reidentification is possible when the
-dataset contain extreme data. In the previous example, if an employee earns 100
-times the average wage, adding noise will not hide that such a big difference
-and it is easy to deduce that the person is the CEO of the company.
+dataset contain extreme values. In the previous example, if someone earns 100
+times the average wage, adding noise will not hide the identity of this highly
+paid employee.  With such a big difference, it is easy to deduce that the 
+person is the CEO of the company.
 
 
 ---
@@ -183,7 +196,7 @@ FROM p1 join p2 on p1.n = p2.n
 WHERE id = p2.id2;
 ```
 
-This is less destructive approach, because we keep real values in the dataset:
+This is a less destructive approach, because we keep real values in the dataset:
 aggregates (`sum`, `average`) are correct. This is also the best strategy if
 the column is referenced by a foreign key.
 
@@ -209,7 +222,8 @@ SET address = fake_address();
 
 The difficulty, of course, is to write the faking function. For dates or
 numeric values, it is basic. But for more complex data types, it may require
-some effort to produce relevant synthetic data.
+some effort to produce relevant synthetic data. Various open source tools can 
+help you with that, personnally I like [faker] a lot.
 
 Furthermore this technique is not appropriate for analytics because the values
 are not "real". On the other hand, it is perfect for CI and functional testing.
