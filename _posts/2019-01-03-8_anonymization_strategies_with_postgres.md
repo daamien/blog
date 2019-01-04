@@ -3,7 +3,7 @@ date: 2019-01-03 23:17:36
 layout: post
 title: "8 Anonymization Strategies with PostgreSQL"
 description: "A tour a various techniques to remove Personally Identifiable Informations (PII) from a Postgres database"
-category: french
+category: english
 tags: [PostgreSQL, data, anonymization, privacy]
 ---
 
