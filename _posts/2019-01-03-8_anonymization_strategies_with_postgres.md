@@ -31,7 +31,7 @@ tour with practical examples. All the queries in the article will use a
 simplified table (see below) and should work with any current version of
 PostgreSQL (from 9.4 to 11).
 
-```SQL
+```sql
 CREATE TABLE people (
     id SERIAL,
     name TEXT NOT NULL,
@@ -55,7 +55,7 @@ a feature called `TABLESAMPLE` that will reduce the size of your dataset.
 
 For example, if you want to work only on 20% of a table:
 
-```SQL
+```sql
 SELECT * FROM people TABLESAMPLE BERNOULLI(20);
 ```
 
@@ -73,7 +73,7 @@ constant value ("Static Substitution").
 
 Example :
 
-```SQL
+```sql
 UPDATE people SET name = '<CONFIDENTIAL>';
 UPDATE people SET address = NULL;
 ```
@@ -95,7 +95,7 @@ This time we are replacing personal data with purely random values.
 
 Example:
 
-```SQL
+```sql
 UPDATE people SET name = md5(random()::text);
 UPDATE people SET salary= 100000*random();
 ```
@@ -113,7 +113,7 @@ original dataset and make them to be slightly different.
 
 For example, modify the salary field by a random factor of +/- 25% like this:
 
-```SQL
+```sql
 UPDATE people
 SET salary= salary *  (1+ (2 * random() - 1 ) * 0.25) ;
 ```
@@ -150,9 +150,9 @@ encryption functions packed in an extension called [pgcrypto].
 [pgcrypto]: https://www.postgresql.org/docs/current/pgcrypto.html
 
 For example, a simple and definitive way is to alter data is to
-generate a new random "salt" for each call a the `crypt` function:
+generate a new random "salt" for each call of the `crypt` function:
 
-```SQL
+```sql
 CREATE EXTENSION pgcrypto;
 
 UPDATE people
@@ -160,9 +160,9 @@ SET name = SELECT crypt('name', gen_salt('md5'));
 ```
 
 In my view, this is useful for very specific situations: mostly
-TEXT attributes with an UNIQUE constraint, or when you need the transformation
-process to be `IMMUTABLE` (but then if the salt or encryption key is stolen,
-authentic data can be revealed).
+TEXT attributes with an UNIQUE constraint. Or when you need the transformation
+process to be `IMMUTABLE` you can use a static salt or encryption key (but then 
+if it is stolen, authentic data can be revealed).
 
 Anyway, this strategy is a good fit for analytics. Not for functional testing
 or development, because in the long run, it is hard to work with values like
@@ -179,7 +179,7 @@ column is still present, but attached to a different record.
 
 For example, here's a permutation on the `salary` column:
 
-```SQL
+```sql
 WITH p1 AS (
     SELECT row_number() over (order by random()) n,
            salary AS salary1
@@ -269,7 +269,7 @@ For instance, we can replace the `age` field with a range based on the previous
 and next decade. Instead of saying "Person X is 28 years old", you'd say
 "Person X is between 20 and 30 years old."
 
-```SQL
+```sql
 CREATE TABLE anonymous_people
 AS  SELECT
         id,
