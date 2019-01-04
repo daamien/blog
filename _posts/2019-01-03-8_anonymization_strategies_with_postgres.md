@@ -120,7 +120,7 @@ SET salary= salary *  (1+ (2 * random() - 1 ) * 0.25) ;
 
 This is great for indirect identifiers: dates and numeric values that should
 remain meaningful without revealing identity. Aggregations such as
-`average` and `count` will be similar to the original.
+`average` and `sum` will be similar to the original.
 
 Of course, it is important to adapt the degree of perturbation depending on
 the distribution of the values, of the attribute and the size of the dataset.
@@ -302,6 +302,9 @@ the final destination of the data.
 
 Here's a quick recap :
 
+<br/>
+
+
 | Strategy            | Data Types       | When to use                        |
 |---------------------|------------------|------------------------------------|
 | Suppression          | All              | Useless attributes                 |
@@ -312,6 +315,9 @@ Here's a quick recap :
 | Faking / Mocking    | All              | Dev / CI / Functional Testing  |
 | Partial Suppression | Text             | Direct Identifiers |
 | Generalization      | Numeric / Dates  | Analytics |
+
+<br/>
+<br/>
 
 What we are trying to do with [PostgreSQL Anonymizer] project is to provide
 tools to help developers implement those techniques. We will work mainly on
@@ -327,7 +333,7 @@ If you are interested, check out the code here :
 <br/>
 <br/>
 <br/>
- 
 
-__Credits__ : [madtibo](https://github.com/madtibo) for the help and ideas and 
+
+__Credits__ : [madtibo](https://github.com/madtibo) for the help and ideas and
 [Aftab Uzzaman](https://www.flickr.com/photos/aftab/5666449222) for the photo.
