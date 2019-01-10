@@ -8,7 +8,7 @@ tags: [PostgreSQL, data, anonymization, privacy]
 ---
 
 Data Anonymization is a complex topic but PostgreSQL has a lot of interesting
-features to tackle this challenge! Here is an overview of different approach and
+features to tackle this challenge! Here is an overview of different approaches and
 how to implement them directly within a PostgreSQL database.
 
 <!--MORE-->
@@ -81,7 +81,7 @@ UPDATE people SET address = NULL;
 This is simple and effective. For useless or highly sensitive data fields,
 it may be the best option.
 
-But of course it will break integrity constraints (`PRIMARY, ``UNIQUE`,
+But of course it will break integrity constraints (`PRIMARY`, `UNIQUE`,
 `NOT NULL`, etc.).  And moreover, the column will be useless for functional
 testing.
 
