@@ -18,7 +18,7 @@ chez les éditeurs....
 
 <!-- MORE -->
 
-![](http://static1.squarespace.com/static/55a8588ee4b0bbf396a2958d/t/55cbd155e4b09e646feb765c/1439420758728/Online_Survey_Icon_or_logo.svg.png)
+![](https://static1.squarespace.com/static/55a8588ee4b0bbf396a2958d/t/55cbd155e4b09e646feb765c/1439420758728/Online_Survey_Icon_or_logo.svg.png)
 
 Pour que le sondage soit instructif , il faut bien sur qu'un maximum de personnes y répondent ! 
 
@@ -36,5 +36,5 @@ C'est très simple et ça se passe en 3 étapes :
 Vous pouvez déclarer autant de logiciels que vous le souhaitez.
 
 Les résultats du sondage sont accessibles en temps réel [ici](https://docs.google.com/spreadsheets/d/1sxd--agLVrFbn7M3YCqFTR812MrBExiyAM_4qVf9trk/pubhtml)
-et la discussion à propos de cette initiative a lieu sur la liste [pgsql-advocacy](http://www.postgresql.org/message-id/471DBBEFA9CD4C26B83E7FAEDCB7482B@tunaPC)
+et la discussion à propos de cette initiative a lieu sur la liste [pgsql-advocacy](https://www.postgresql.org/message-id/471DBBEFA9CD4C26B83E7FAEDCB7482B@tunaPC)
 
