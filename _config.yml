@@ -19,8 +19,8 @@ author :
   linkedin : https://www.linkedin.com/pub/damien-clochard/a6/b/830
   gplus : https://plus.google.com/u/0/+damienclochard/	
   feedburner : 
-  bio : "My name's Damien Clochard and I work at <a href='http://www.dalibo.com'>Dalibo</a>, a French PostgreSQL company. <br/> 
-	 I'm also the executive editor of <a href='http://www.pgmag.org'>PG Magazine,  </a>
+  bio : "My name's Damien Clochard and I work at <a href='https://www.dalibo.com'>Dalibo</a>, a French PostgreSQL company. <br/> 
+	 I'm also the executive editor of <a href='https://www.pgmag.org'>PG Magazine,  </a>
 	 president of the <a href='https://asso.postgresql.fr'>French Speaking PostgreSQL Association</a>
 	 
 	"
@@ -34,7 +34,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://blog.taadeem.net/
+production_url : https://blog.taadeem.net/
 #production_url : /
 
 mytheme: 
@@ -67,8 +67,8 @@ JB :
   #   - Only the following values are falsy: ["", null, false]
   #   - When setting BASE_PATH it must be a valid url.
   #     This means always setting the protocol (http|https) or prefixing with "/"
-  BASE_PATH : http://daamien.github.io/blog
-
+  #BASE_PATH : https://daamien.github.io/blog
+  BASE_PATH : https://blog.taadeem.net
   # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
   # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
   #
@@ -77,8 +77,9 @@ JB :
   #   http://s3.amazonaws.com/yoursite/themes/watermelon
   #   /assets
   #
-  ASSET_PATH : http://daamien.github.io/blog/assets/themes/dbyll 
-
+  #ASSET_PATH : https://daamien.github.io/blog/assets/themes/dbyll 
+  ASSET_PATH : https://blog.taadeem.net/assets/themes/dbyll/
+  
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
   #
