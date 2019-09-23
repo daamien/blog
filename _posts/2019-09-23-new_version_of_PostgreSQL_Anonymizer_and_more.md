@@ -12,6 +12,8 @@ and learn various ways to protect privacy using the power of PostgreSQL.
 The project is now part of the [Dalibo Labs] intiative and we've published
 a [new version] last week...
 
+<!--MORE-->
+
 This seems like a nice moment to analyze the progress we've made, how the GDPR 
 is changing the game and where we're going....
 
@@ -19,8 +21,6 @@ is changing the game and where we're going....
 [Dalibo Labs]: https://labs.dalibo.com
 [new version]: http://blog.dalibo.com/2019/09/13/postgresql_anonymizer_0.3_EN.html
 
-
-<!--MORE-->
 
 ![](https://raw.githubusercontent.com/dalibo/blog/gh-pages/img/PostgreSQL-Anonymizer_H_couleur.png)
 
