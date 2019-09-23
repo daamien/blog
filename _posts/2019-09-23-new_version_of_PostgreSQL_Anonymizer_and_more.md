@@ -2,12 +2,12 @@
 date: 2019-09-23 10:17:36
 layout: post
 title: New version of PostgreSQL Anonymizer and more...
-description: "GDPR fines are coming and other stories !"
+description: "GDPR fines are coming and other stories!"
 category: english
 tags: ["PostgreSQL","data","masking", "anonymization", "GDPR"]
 ---
 
-One year I started a side-project cvalled [PostgreSQL Anonymizer] to study 
+One year ago, I started a side-project called [PostgreSQL Anonymizer] to study 
 and learn various ways to protect privacy using the power of PostgreSQL. 
 The project is now part of the [Dalibo Labs] intiative and we've published
 a [new version] last week...
@@ -27,40 +27,41 @@ is changing the game and where we're going....
 ## GPDR : Sanctions are coming 
 
 While I was working on this, the landscape has changed... When the GPDR was 
-implemented in May 2018, one the biggest questions was if the fines would be 
-signification enough to force a real change in corporate data policies....
+implemented in May 2018, one of the biggest questions was if the fines would be 
+significant enough to force a real change in corporate data policies....
 
-From what we can see, the fines are [GPDR fines are starting to fall], just 
-during July 2019 : Bristish Airways got 204 M€ and Marriott Hotels got 110 M€.
+From what we can see, the [GPDR penalties are starting to fall], just 
+during July 2019: Bristish Airways got 204 M€, and Marriott Hotels got 110 M€.
 
 There are also smaller fines for smaller companies, what's interesting is that 
 the biggest fines are related to the [Article 32] and the « Insufficient 
-technical and organisational measures to ensure information security »
+technical and organisational measures to ensure information security ».
 
 In other words : **Data Leaks**.
 
-Here's where anonymisation can help ! Based on my experience, we can reduce 
+Here's where anonymization can help ! Based on my experience, we can reduce 
 the risks of leaking personnal information by limiting the number of 
-environments where the data is hosted. In many staging setups such as 
-pre-production, training, development, CI, analytics, etc... the real data
+environments where the data is hosted. In many staging setups (such as 
+pre-production, training, development, CI, analytics, etc...) the real data
 is not absolutely required. With a strong anonymization policy we can limit 
 real data only where it is needed and work on fake/random data everywhere 
-else. When Anonymization is done the right way, the anonymized datasets are 
+else. When anonymization is done the right way, the anonymized datasets are 
 not concerned by the GPDR. 
 
 In a nutshell, anonymization is powerful method to reduce your 
-**attack surface** and its a key to limit the risks GPDR penalties related to 
-data leaks.
+**attack surface** and it's a key to limit the risks of GPDR penalties related 
+to data leaks.
 
-This is why we're investing a lot of effort to develop masking tools directly 
+This is why we're investing a lot of efforts to develop masking tools directly 
 inside PostgreSQL !
 
-[Art. 32]: http://www.privacy-regulation.eu/en/32.htm
+[Article 32]: http://www.privacy-regulation.eu/en/32.htm
 [GPDR fines are starting to fall]: http://www.enforcementtracker.com/
 
 ## Major Improvements 
 
-Over the last month, I've worked on different aspect of the extension, especially :
+Over the last month, I've worked on different aspects of the extension, 
+especially :
 
 * Adding more tests and protections against SQL injection
 * Enabling users to export [Anonymous Dumps] using the wonderful 
@@ -90,7 +91,8 @@ One of the main drawback of the current implementation of PostgreSQL is that
 [Masking Rules] are declared using the `COMMENT` syntax which can be annoying
 if your database already has comments. 
 
-Thanks to an idea from Alvaro Herrera, I'm currently working on a new declaration syntax based on [Security Labels], a little known feature 
+Thanks to an idea from Alvaro Herrera, I'm currently working on a new 
+declaration syntax based on [Security Labels], a little known feature 
 also used by the [sepgsql] extension
 
 [sepgsql]: https://www.postgresql.org/docs/current/sepgsql.html
