@@ -56,7 +56,7 @@ This is why we're investing a lot of efforts to develop masking tools directly
 inside PostgreSQL !
 
 [Article 32]: http://www.privacy-regulation.eu/en/32.htm
-[GPDR fines are starting to fall]: http://www.enforcementtracker.com/
+[GPDR penalties are starting to fall]: http://www.enforcementtracker.com/
 
 ## Major Improvements 
 
