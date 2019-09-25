@@ -1,9 +1,9 @@
 ---
 date: 2019-09-25 10:17:36
 layout: post
-title: New version of PostgreSQL Anonymizer and more...
-description: "GDPR fines are coming and other stories!"
-category: english
+title: Nouvelle version de PostgreSQL Anonymizer et plus...
+description: "Les amendre RGPD arrivent !"
+category: french 
 tags: ["PostgreSQL","data","masking", "anonymization", "GDPR"]
 ---
 
