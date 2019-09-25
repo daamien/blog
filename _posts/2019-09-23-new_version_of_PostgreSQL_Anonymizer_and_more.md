@@ -24,13 +24,13 @@ is changing the game and where we're going....
 
 ![](https://raw.githubusercontent.com/dalibo/blog/gh-pages/img/PostgreSQL-Anonymizer_H_couleur.png)
 
-## GPDR : Sanctions are coming 
+## GDPR : Sanctions are coming 
 
-While I was working on this, the landscape has changed... When the GPDR was 
+While I was working on this, the landscape has changed... When the GDPR was 
 implemented in May 2018, one of the biggest questions was if the fines would be 
 significant enough to force a real change in corporate data policies....
 
-From what we can see, the [GPDR penalties are starting to fall], just 
+From what we can see, the [GDPR penalties are starting to fall], just 
 during July 2019: Bristish Airways got 204 M€, and Marriott Hotels got 110 M€.
 
 There are also smaller fines for smaller companies, what's interesting is that 
@@ -46,17 +46,17 @@ pre-production, training, development, CI, analytics, etc...) the real data
 is not absolutely required. With a strong anonymization policy we can limit 
 real data only where it is needed and work on fake/random data everywhere 
 else. When anonymization is done the right way, the anonymized datasets are 
-not concerned by the GPDR. 
+not concerned by the GDPR. 
 
 In a nutshell, anonymization is powerful method to reduce your 
-**attack surface** and it's a key to limit the risks of GPDR penalties related 
+**attack surface** and it's a key to limit the risks of GDPR penalties related 
 to data leaks.
 
 This is why we're investing a lot of efforts to develop masking tools directly 
 inside PostgreSQL !
 
 [Article 32]: http://www.privacy-regulation.eu/en/32.htm
-[GPDR penalties are starting to fall]: http://www.enforcementtracker.com/
+[GDPR penalties are starting to fall]: http://www.enforcementtracker.com/
 
 ## Major Improvements 
 
