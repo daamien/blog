@@ -12,7 +12,7 @@ tags: ["PostgreSQL","data","masking", "anonymization", "scrambling"]
 information inside a PostgreSQL database.
 
 [Dalibo Labs]: https://labs.dalibo.com
-[version 0.5]:  FIXME
+[version 0.5]: https://www.postgresql.org/about/news/1993/ 
 [PostgreSQL Anonymizer]: https://gitlab.com/dalibo/postgresql_anonymizer/
 
 <!--MORE-->
