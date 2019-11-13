@@ -142,7 +142,9 @@ question "Combien de personnes nées avant 1990 ont eu la grippe ?"
 avec la requête ci-dessous:
 
 ```sql
-SELECT count(*)                                                                 FROM generalized_patient                                                        WHERE disease = 'Flu'                                                        
+SELECT count(*)
+FROM generalized_patient
+WHERE disease = 'Flu'
 AND upper(birth) < '1990-01-01';
 ```
 
