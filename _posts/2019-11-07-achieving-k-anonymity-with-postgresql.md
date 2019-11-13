@@ -45,7 +45,8 @@ or even "I live in France") instead of giving our exact address.
 What is interesting with this approach is that **the data remains true** while 
 avoiding the risk of re-identification.
 
-So [Generalization] is a instinctive and way to hide personnal information for 
+So [Generalization] is an instinctive and simple way to hide personnal 
+information for
 human beings. But how would that apply to a database management system like 
 PostgreSQL ? After all the primary purpose of a database is to store accurate 
 information. If you have `birthdate` column in a SQL table, you can't 
