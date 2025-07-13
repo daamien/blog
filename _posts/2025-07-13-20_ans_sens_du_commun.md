@@ -1,5 +1,5 @@
 ---
-date: 2025-07-13 22:30:36
+date: 2025-07-13 12:30:36
 layout: post
 title: "20 ans de DALIBO : PostgreSQL et le sens du commun"
 description: "La société coopérative DALIBO fête ses 20 ans aujourd’hui même !"
