@@ -80,7 +80,7 @@ And run the usual command:
 cargo pgrx package --pg-config /usr/pgsql-18/bin/pg_config
 ```
 
-That's it. The RPM and DEB packages lands in the output directory, next to the staged files.
+That's it. The RPM and DEB packages will land in the output directory, next to the staged files.
 For the example above, you'd get `world-pg18-0.0.0-1.x86_64.rpm` in `target/release/world-pg18/`,
 which will install the extension under `/usr/pgsql-18/`.
 
@@ -109,9 +109,9 @@ You can also use variables such as `${PG_MAJOR_VERSION}`, `${VERSION}`, `${ARCH}
 or `${PG_SHAREDIR}`. The full list and the default specs are in the
 [cargo-pgrx README](https://github.com/pgcentralfoundation/pgrx/tree/develop/cargo-pgrx#building-rpm-and-deb-packages).
 
-Note that if you already used `cargo deb`, be careful ! It will also reads `[package.metadata.deb]` but
+Note that if you already used `cargo deb`, be careful ! It will also read `[package.metadata.deb]` but
 the metadata parameters may differ. So an existing `cargo deb` metadata may make `cargo pgrx package`
-fail. Use `cargo pgrx package --no-distrib-packages` if you want to keep your previous `cargo deb` config
+fail. Use `cargo pgrx package --no-distrib-packages` if you want to keep your previous `cargo deb` config.
 
 ## Why I Wrote This
 
